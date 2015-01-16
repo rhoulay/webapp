@@ -453,6 +453,12 @@ p{
   background-repeat:no-repeat;
   background-position: top center;
 }
+#section16{
+    background-image:url(img/page-16-bg.jpg);
+    background-size:100% auto;
+    background-repeat:no-repeat;
+    background-position: top center;
+}
 .animation-img{
   position:absolute;
   top:0;
