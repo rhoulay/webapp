@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name='HandheldFriendly' content='True' />
+  <!-- <meta name='viewport' content='initial-scale=1.0; maximum-scale=1.0; user-scalable=0;' /> -->
+  <meta name='viewport' content='user-scalable=0' />
+  <meta name="viewport" content="width=device-width" />
+	<title>雅昌艺术网</title>
+	<meta name="author" content="Felix" />
+	<meta name="description" content="雅昌艺术家." />
+	<meta name="keywords"  content="fullpage,jquery,demo,simple" />
+	<meta name="Resource-type" content="Document" />
+
+
+	<link rel="stylesheet" type="text/css" href="app.css?v1.1" />
+
+	<script src='lib/jquery.min.js' type='text/javascript'></script>
+  
+	<script type="text/javascript" src="lib/jquery.fullPage.js"></script>
+  <script type="text/javascript" src="lib/jquery.eraser.js"></script>
+  
+  
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('#fullpage').fullpage({
+				sectionsColor: ['#C30D23', '#1a1a1a', '#1a1a1a', '#1a1a1a', '#1a1a1a', '#1a1a1a', '#1a1a1a', '#EAEFF3', '#1a1a1a', '#1a1a1a', '#1a1a1a', '#EAEFF3', '#1a1a1a', '#EAEFF3', '#1a1a1a', '#1a1a1a', '#1a1a1a', '#1a1a1a', '#1a1a1a', '#1a1a1a'],
+        css3: true,
+        scrollingSpeed: 700,
+        scrollBar: false,
+        easingcss3: 'ease',
+        resize : false,
+        verticalCentered: false,
+        slidesNavigation: true,
+        slidesNavPosition: 'center',
+        afterRender: function(){
+          $('#section1-arrow').hide();
+            $.fn.fullpage.setAllowScrolling(false);
+            setTimeout(function() {
+              $( "#cover-animation" ).fadeOut( "slow", function() {
+                  $('#section1-arrow').show();
+                  $.fn.fullpage.setAllowScrolling(true);
+                });
+            }, 5000);
+        },
+        afterLoad: function(anchorLink, index){
+          // console.log(index);
+          if(index == 2){
+            if($('#redux').is(":visible")){
+              $.fn.fullpage.setAllowScrolling(false);
+              $('#redux').eraser( {
+                 size: 40, // define brush size (default value is 40)
+                 completeRatio: .4, // allows to call function when a erased ratio is reached (between 0 and 1, default is .7 )
+                completeFunction: showResetButton
+               } );
+            }
+          }
+          else if(index == 13){
+            if($('#eraser-div-13').is(":visible")){
+              $.fn.fullpage.setAllowScrolling(false);
+              $('#redux-13').eraser( {
+                 size: 40, // define brush size (default value is 40)
+                 completeRatio: .6, // allows to call function when a erased ratio is reached (between 0 and 1, default is .7 )
+                completeFunction: showPage
+               } );
+            }
+          }
+        }
+			});
+      $('#section2-arrow').hide();
+      $('#section13-arrow').hide();
+      var playing = true;
+        $('#music').bind('click', function(){
+            $(this).toggleClass("down");
+            if (playing == false) {
+                document.getElementById('zxzz').play();
+                playing = true;
+            } else {
+              document.getElementById('zxzz').pause();
+              playing = false;
+            }
+        });
+		});
+    
+    function showResetButton(){
+      $('#section2-arrow').show();
+      $('#redux').hide();
+      setTimeout(function() {
+        $.fn.fullpage.setAllowScrolling(true);
+      }, 1000);
+    }
+    function showPage(){
+      $('#section13-arrow').show();
+      $('#eraser-div-13').hide();
+      setTimeout(function() {
+        $.fn.fullpage.setAllowScrolling(true);
+      }, 1000);
+    }
+    
+    
+	</script>
+
+</head>
+<body>
+<audio id="zxzz" src="img/48.mp3" autoplay loop></audio>
+<div id="fullpage">
+	<div class="section active" id="section1">
+    <div id="music" title="button"></div>
+    <div id="cover-animation"></div>
+    <img src="img/cover.png">
+    <img src="img/arrow-down.svg" class="bottom spring" id="section1-arrow">
+  </div>
+	<div class="section" id="section2">
+    <div id="eraser-div">
+      <img id="robot" src="img/page-2.png" />
+      <img id="redux" src="img/page-2-cover.jpg" />
+    </div>
+   <img src="img/arrow-down-dark.svg" class="bottom spring" id="section2-arrow">
+	</div>
+	<div class="section" id="section3">
+  <img src="img/page-3.png">
+  <img src="img/arrow-down-dark.svg" class="bottom spring">
+</div>
+	<div class="section" id="section4">
+    <img src="img/page-4.png">
+    <img src="img/arrow-down-dark.svg" class="bottom spring">
+  </div>
+	<div class="section" id="section5">
+    <img src="img/page-5.png">
+    <img src="img/arrow-down-dark.svg" class="bottom spring">
+  </div>
+	<div class="section" id="section6">
+    <img src="img/page-6.png">
+    <img src="img/arrow-down-dark.svg" class="bottom spring">
+  </div>
+	<div class="section" id="section7">
+    <img src="img/page-7.gif" class="animation-img">
+    <img src="img/page-7.png">
+    <img src="img/arrow-down-dark.svg" class="bottom spring">
+  </div>
+	<div class="section" id="section8">
+    <img src="img/page-8.png">
+    <img src="img/arrow-down-dark.svg" class="bottom spring">
+  </div>
+	<div class="section" id="section9">
+    <img src="img/page-9.gif" class="animation-img">
+    <img src="img/page-9.png">
+    <img src="img/arrow-down-dark.svg" class="bottom spring">
+  </div>
+	<div class="section" id="section10">
+    <img src="img/page-10.png">
+    <img src="img/arrow-down-dark.svg" class="bottom spring">
+  </div>
+	<div class="section" id="section11">
+    <img src="img/page-11.gif" class="animation-img">
+    <img src="img/page-11.png">
+    <img src="img/arrow-down-dark.svg" class="bottom spring">
+  </div>
+	<div class="section" id="section12">
+    <img src="img/page-12.png">
+    <img src="img/arrow-down-dark.svg" class="bottom spring">
+  </div>
+	<div class="section" id="section13">
+    <div id="eraser-div-13">
+      <img id="robot-13" src="img/page-13-cover.jpg" />
+      <img id="redux-13" src="img/page-13-cover-blur.jpg" />
+    </div>
+    <img src="img/page-13.png">
+    <img src="img/arrow-down-dark.svg" class="bottom spring" id="section13-arrow">
+  </div>
+	<div class="section" id="section14">
+    <img src="img/page-14.png">
+    <img src="img/arrow-down-dark.svg" class="bottom spring">
+  </div>
+	<div class="section" id="section15">
+    <img src="img/page-15.gif" class="animation-img">
+    <img src="img/page-15.png">
+    <img src="img/arrow-down-dark.svg" class="bottom spring">
+  </div>
+	<div class="section" id="section16">
+    <img src="img/page-16.png">
+    <img src="img/arrow-down-dark.svg" class="bottom spring">
+  </div>
+	<div class="section" id="section17">
+    <img src="img/page-17.png">
+    <img src="img/arrow-down-dark.svg" class="bottom spring">
+  </div>
+	<div class="section" id="section18">
+    <div class="slide"><img src="img/page-18-c.jpg"></div>
+    <div class="slide"><img src="img/page-18-b.jpg"></div>
+    <div class="slide"><img src="img/page-18.jpg"></div>
+    <img src="img/arrow-down-dark.svg" class="bottom spring">
+  </div>
+	<div class="section" id="section19">
+    <img src="img/page-19.png">
+    <img src="img/arrow-down-dark.svg" class="bottom spring">
+  </div>
+	<div class="section" id="section20">
+    <img src="img/page-20.png">
+    <img src="img/arrow-up-dark.svg" class="bottom spring">
+  </div>
+</div>
+
+
+</body>
+</html>
