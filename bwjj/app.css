@@ -495,18 +495,16 @@ p{
   position:absolute;
   top:14px;
   right:14px;
-  width:32px;
-  height:32px;
+  width:44px;
+  height:44px;
   z-index:100;
-  border:2px solid #C79E62;
-  border-radius:32px;
   background-image:url(img/sound-icon.svg);
-  background-size: auto 24px;
+  background-size: auto 44px;
   background-repeat:no-repeat;
   background-position: 4px center;
 }
 #music.down{
-  background-position: -28px center;
+  background-position: -44px center;
 }
 #cover-animation{
   z-index: 10;
