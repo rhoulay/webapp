@@ -13,7 +13,6 @@
     <meta name="keywords"  content="fullpage,jquery,demo,simple" />
     <meta name="Resource-type" content="Document" />
 
-
     <link rel="stylesheet" type="text/css" href="app.css?v1.1" />
 
     <script src='lib/jquery.min.js' type='text/javascript'></script>
@@ -25,7 +24,7 @@
     <script type="text/javascript">
         $(document).ready(function() {
             $('#fullpage').fullpage({
-                sectionsColor: ['#C30D23', '#1a1a1a', '#1a1a1a', '#1a1a1a', '#1a1a1a', '#1a1a1a', '#EAEFF3', '#1a1a1a', '#EAEFF3', '#1a1a1a', '#EAEFF3', '#1a1a1a', '#1a1a1a', '#1a1a1a', '#EAEFF3',  '#1a1a1a', '#EBEEF1', '#1a1a1a', '#1a1a1a', '#1a1a1a', '#1a1a1a'],
+                sectionsColor: ['#C30D23', '#000000', '#1a1a1a', '#1a1a1a', '#1a1a1a', '#1a1a1a', '#EAEFF3', '#1a1a1a', '#EAEFF3', '#1a1a1a', '#EAEFF3', '#1a1a1a', '#1a1a1a', '#1a1a1a', '#EAEFF3',  '#1a1a1a', '#EBEEF1', '#1a1a1a', '#1a1a1a', '#1a1a1a', '#1a1a1a'],
                 css3: true,
                 scrollingSpeed: 700,
                 scrollBar: false,
@@ -46,17 +45,7 @@
                 },
                 afterLoad: function(anchorLink, index){
                     // console.log(index);
-                    if(index == 2){
-                        if($('#redux').is(":visible")){
-                            $.fn.fullpage.setAllowScrolling(false);
-                            $('#redux').eraser( {
-                                size: 40, // define brush size (default value is 40)
-                                completeRatio: .4, // allows to call function when a erased ratio is reached (between 0 and 1, default is .7 )
-                                completeFunction: showResetButton
-                            } );
-                        }
-                    }
-                    else if(index == 7){
+                    if(index == 7){
                         if($('#eraser-div-13').is(":visible")){
                             $.fn.fullpage.setAllowScrolling(false);
                             $('#redux-13').eraser( {
@@ -68,7 +57,6 @@
                     }
                 }
             });
-            $('#section2-arrow').hide();
             $('#section13-arrow').hide();
             var playing = true;
             $('#music').bind('click', function(){
@@ -83,13 +71,6 @@
             });
         });
 
-        function showResetButton(){
-            $('#section2-arrow').show();
-            $('#redux').hide();
-            setTimeout(function() {
-                $.fn.fullpage.setAllowScrolling(true);
-            }, 1000);
-        }
         function showPage(){
             $('#section13-arrow').show();
             $('#eraser-div-13').hide();
@@ -112,11 +93,8 @@
         <img src="img/arrow-down.svg" class="bottom spring" id="section1-arrow">
     </div>
     <div class="section" id="section2">
-        <div id="eraser-div">
-            <img id="robot" src="img/page-2.png" />
-            <img id="redux" src="img/page-2-cover.jpg" />
-        </div>
-        <img src="img/arrow-down-dark.svg" class="bottom spring" id="section2-arrow">
+        <img src="img/page-2.jpg">
+        <img src="img/arrow-down-dark.svg" class="bottom spring">
     </div>
     <div class="section" id="section3">
         <img src="img/page-3.png">
@@ -208,6 +186,44 @@
     </div>
 </div>
 
+<script>
+    document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {
+        if(!window.shareData){
+            window.shareData = {
+                "link": "http://rhoulay.github.io/webapp/bwjj/",
+                "img": "http://rhoulay.github.io/webapp/bwjj/img/icon.png",
+                "title": "当代艺术家告诉你如何庇佑家宅，百无禁忌！",
+                "content": "重拾遗忘的年味儿，60年难遇金羊年，当代艺术家告诉你如何庇佑家宅，百无禁忌！"
+            };
+        }
+        // 发送给好友
+        WeixinJSBridge.on('menu:share:appmessage', function (argv) {
+            WeixinJSBridge.invoke('sendAppMessage', {
+                "img_url": window.shareData.img,
+                "img_width": "250",
+                "img_height": "250",
+                "link": window.shareData.link,
+                "desc": window.shareData.content,
+                "title": window.shareData.title
+            }, function (res) {
+                _report('send_msg', res.err_msg);
+            })
+        });
+        // 分享到朋友圈
+        WeixinJSBridge.on('menu:share:timeline', function (argv) {
+            WeixinJSBridge.invoke('shareTimeline', {
+                "img_url": window.shareData.img,
+                "img_width": "250",
+                "img_height": "250",
+                "link": window.shareData.link,
+                "desc": window.shareData.content,
+                "title": window.shareData.title
+            }, function (res) {
+                _report('timeline', res.err_msg);
+            });
+        });
 
+    }, false)
+</script>
 </body>
 </html>
