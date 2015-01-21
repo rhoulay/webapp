@@ -20,7 +20,6 @@
     <script type="text/javascript" src="lib/jquery.fullPage.js"></script>
     <script type="text/javascript" src="lib/jquery.eraser.js"></script>
 
-
     <script type="text/javascript">
         $(document).ready(function() {
             $('#fullpage').fullpage({
@@ -85,6 +84,7 @@
 </head>
 <body>
 <audio id="zxzz" src="img/48.mp3" autoplay loop></audio>
+<img src="img/icon.jpg" style="display:none;">
 <div id="fullpage">
     <div class="section active" id="section1">
         <div id="music" title="button"></div>
@@ -185,45 +185,5 @@
         </a>
     </div>
 </div>
-
-<script>
-    document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {
-        if(!window.shareData){
-            window.shareData = {
-                "link": "http://rhoulay.github.io/webapp/bwjj/",
-                "img": "http://rhoulay.github.io/webapp/bwjj/img/icon.png",
-                "title": "当代艺术家告诉你如何庇佑家宅，百无禁忌！",
-                "content": "重拾遗忘的年味儿，60年难遇金羊年，当代艺术家告诉你如何庇佑家宅，百无禁忌！"
-            };
-        }
-        // 发送给好友
-        WeixinJSBridge.on('menu:share:appmessage', function (argv) {
-            WeixinJSBridge.invoke('sendAppMessage', {
-                "img_url": window.shareData.img,
-                "img_width": "250",
-                "img_height": "250",
-                "link": window.shareData.link,
-                "desc": window.shareData.content,
-                "title": window.shareData.title
-            }, function (res) {
-                _report('send_msg', res.err_msg);
-            })
-        });
-        // 分享到朋友圈
-        WeixinJSBridge.on('menu:share:timeline', function (argv) {
-            WeixinJSBridge.invoke('shareTimeline', {
-                "img_url": window.shareData.img,
-                "img_width": "250",
-                "img_height": "250",
-                "link": window.shareData.link,
-                "desc": window.shareData.content,
-                "title": window.shareData.title
-            }, function (res) {
-                _report('timeline', res.err_msg);
-            });
-        });
-
-    }, false)
-</script>
 </body>
 </html>
