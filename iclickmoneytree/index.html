@@ -10,6 +10,7 @@
     <meta http-equiv="cleartype" content="on">
 
     <link rel="stylesheet" href="lib/transition.min.css">
+    <link rel="stylesheet" href="lib/animate.min.css">
     <link rel="stylesheet" href="app.css">
 </head>
 
@@ -19,11 +20,11 @@
 <div id="one" data-role="page" data-dom-cache="true">
     <div class="top-section-10">
         <img src="img/cover01.png" style="width: 96px;">
-        <img src="img/title.svg" style="width: 202px;">
+        <img src="img/title.svg" style="width: 202px;" class="animated infinite tada">
         <div class="padding-20"></div>
         <img src="img/cover02.png" style="width: 192px;">
         <div class="padding-20"></div>
-        <div class="loading">loading...</div>
+        <div class="loading animated infinite pulse">loading...</div>
     </div>
     <div class="bottom-section-5">
         <img src="img/logo.svg" style="width: 120px;">
@@ -35,7 +36,13 @@
 	 width="637.8px" height="775.3px" viewBox="0 0 637.8 775.3" style="enable-background:new 0 0 637.8 775.3;" xml:space="preserve"
 	 preserveAspectRatio="xMidYMin">
 <style type="text/css">
-	.st0{fill:url(#SVGID_1_);}
+    @-webkit-keyframes tree-color {
+        0% {fill:#FFF8B8; fill-opacity: 1;}
+        20% {fill: #d30000;}
+        40% {fill: #820000;}
+        100% {fill:#1e0202; fill-opacity: 0.3;}
+    }
+    .st0{fill:url(#SVGID_1_);}
     .st1{fill:url(#SVGID_2_);}
     .st2{fill:#FFF171;}
     .st3{fill:url(#SVGID_3_);}
@@ -48,7 +55,11 @@
     .st10{fill:url(#SVGID_9_);}
     .st11{fill:url(#SVGID_10_);}
     .st12{fill:url(#SVGID_11_);}
-    .st13{fill:#FFF8B8;}
+    .st13{
+        -webkit-animation: tree-color 3s; /* Chrome, Safari, Opera */
+        fill:#FFF8B8;
+        fill-opacity: 1;
+    }
     .st14{fill:#EC1C24;}
     .st15{fill:url(#SVGID_12_);}
     .st16{fill:url(#SVGID_13_);}
@@ -81,6 +92,11 @@
     .st43{fill:url(#SVGID_40_);}
     .st44{fill:url(#SVGID_41_);}
     .st45{fill:url(#SVGID_42_);}
+    .dark{
+        fill:#1e0202;
+        fill-opacity: 0.3;
+    }
+
 </style>
 <symbol  id="coin_1_" viewBox="-15 -15 30 30">
 	<g>
@@ -357,60 +373,60 @@
 		C444.7,177.2,441.5,175.2,436.6,173.1z M433.6,164c-0.3-1.5-2.7-4.2-3.7-5.4c2.1,0.2,4.1,0.5,6.1,1c1.9,2,2.9,4.3,3.2,5.5
 		C437.2,164.6,435.3,164.3,433.6,164z M582.4,715.7H461.1v59.6h111.3c7,0.3,10.4-2.6,10-9V715.7z M549.7,766.3h-61.2v-40.6h65.9
 		v35.3C555.1,765.3,553.5,767.1,549.7,766.3z"/>
-	<g id="coin">
+	<g id="coin" transform="translate(-15,-15)">
 
-			<use xlink:href="#coin_1_"  width="30" height="30" x="-15" y="-15" transform="matrix(1 0 0 -1 621.0788 251.9688)" style="overflow:visible;"/>
+			<use class="coin_little" xlink:href="#coin_1_"  width="30" height="30" x="621.0788" y="251.9688" style="overflow:visible;"/>
 
-			<use xlink:href="#coin_1_"  width="30" height="30" x="-15" y="-15" transform="matrix(1 0 0 -1 547.8695 79.8279)" style="overflow:visible;"/>
+			<use class="coin_little" xlink:href="#coin_1_"  width="30" height="30" x="547.8695" y="79.8279" style="overflow:visible;"/>
 
-			<use xlink:href="#coin_1_"  width="30" height="30" x="-15" y="-15" transform="matrix(1 0 0 -1 429.1516 105.5501)" style="overflow:visible;"/>
+			<use class="coin_little" xlink:href="#coin_1_"  width="30" height="30" x="429.1516" y="105.5501" style="overflow:visible;"/>
 
-			<use xlink:href="#coin_1_"  width="30" height="30" x="-15" y="-15" transform="matrix(1 0 0 -1 396.5042 50.1484)" style="overflow:visible;"/>
+			<use class="coin_little" xlink:href="#coin_1_"  width="30" height="30" x="396.5042" y="50.1484" style="overflow:visible;"/>
 
-			<use xlink:href="#coin_1_"  width="30" height="30" x="-15" y="-15" transform="matrix(1 0 0 -1 587.4421 175.7915)" style="overflow:visible;"/>
+			<use class="coin_little" xlink:href="#coin_1_"  width="30" height="30" x="587.4421" y="175.7915" style="overflow:visible;"/>
 
-			<use xlink:href="#coin_1_"  width="30" height="30" x="-15" y="-15" transform="matrix(1 0 0 -1 576.5596 230.2038)" style="overflow:visible;"/>
+			<use class="coin_little" xlink:href="#coin_1_"  width="30" height="30" x="576.5596" y="230.2038" style="overflow:visible;"/>
 
-			<use xlink:href="#coin_1_"  width="30" height="30" x="-15" y="-15" transform="matrix(1 0 0 -1 496.4251 314.2956)" style="overflow:visible;"/>
+			<use class="coin_little" xlink:href="#coin_1_"  width="30" height="30" x="496.4251" y="314.2956" style="overflow:visible;"/>
 
-			<use xlink:href="#coin_1_"  width="30" height="30" x="-15" y="-15" transform="matrix(1 0 0 -1 578.5383 426.0883)" style="overflow:visible;"/>
+			<use class="coin_little" xlink:href="#coin_1_"  width="30" height="30" x="578.5383" y="426.0883" style="overflow:visible;"/>
 
-			<use xlink:href="#coin_1_"  width="30" height="30" x="-15" y="-15" transform="matrix(1 0 0 -1 586.4528 554.6993)" style="overflow:visible;"/>
+			<use class="coin_little" xlink:href="#coin_1_"  width="30" height="30" x="586.4528" y="554.6993" style="overflow:visible;"/>
 
-			<use xlink:href="#coin_1_"  width="30" height="30" x="-15" y="-15" transform="matrix(1 0 0 -1 466.7456 577.4536)" style="overflow:visible;"/>
+			<use class="coin_little" xlink:href="#coin_1_"  width="30" height="30" x="466.7456" y="577.4536" style="overflow:visible;"/>
 
-			<use xlink:href="#coin_1_"  width="30" height="30" x="-15" y="-15" transform="matrix(1 0 0 -1 422.2264 428.0669)" style="overflow:visible;"/>
+			<use class="coin_little" xlink:href="#coin_1_"  width="30" height="30" x="422.2264" y="428.0669" style="overflow:visible;"/>
 
-			<use xlink:href="#coin_1_"  width="30" height="30" x="-15" y="-15" transform="matrix(1 0 0 -1 373.75 509.1908)" style="overflow:visible;"/>
+			<use class="coin_little" xlink:href="#coin_1_"  width="30" height="30" x="373.75" y="509.1908" style="overflow:visible;"/>
 
-			<use xlink:href="#coin_1_"  width="30" height="30" x="-15" y="-15" transform="matrix(1 0 0 -1 332.1987 311.3277)" style="overflow:visible;"/>
+			<use class="coin_little" xlink:href="#coin_1_"  width="30" height="30" x="332.1987" y="311.3277" style="overflow:visible;"/>
 
-			<use xlink:href="#coin_1_"  width="30" height="30" x="-15" y="-15" transform="matrix(1 0 0 -1 319.3376 360.7935)" style="overflow:visible;"/>
+			<use class="coin_little" xlink:href="#coin_1_"  width="30" height="30" x="319.3376" y="360.7935" style="overflow:visible;"/>
 
-			<use xlink:href="#coin_1_"  width="30" height="30" x="-15" y="-15" transform="matrix(1 0 0 -1 278.7757 365.74)" style="overflow:visible;"/>
+			<use class="coin_little" xlink:href="#coin_1_"  width="30" height="30" x="278.7757" y="365.74" style="overflow:visible;"/>
 
-			<use xlink:href="#coin_1_"  width="30" height="30" x="-15" y="-15" transform="matrix(1 0 0 -1 262.9467 270.7657)" style="overflow:visible;"/>
+			<use class="coin_little" xlink:href="#coin_1_"  width="30" height="30" x="262.9467" y="270.7657" style="overflow:visible;"/>
 
-			<use xlink:href="#coin_1_"  width="30" height="30" x="-15" y="-15" transform="matrix(1 0 0 -1 234.2565 214.3748)" style="overflow:visible;"/>
+			<use class="coin_little" xlink:href="#coin_1_"  width="30" height="30" x="234.2565" y="214.3748" style="overflow:visible;"/>
 
-			<use xlink:href="#coin_1_"  width="30" height="30" x="-15" y="-15" transform="matrix(1 0 0 -1 210.5129 115.4432)" style="overflow:visible;"/>
+			<use class="coin_little" xlink:href="#coin_1_"  width="30" height="30" x="210.5129" y="115.4432" style="overflow:visible;"/>
 
-			<use xlink:href="#coin_1_"  width="30" height="30" x="-15" y="-15" transform="matrix(1 0 0 -1 159.0685 73.892)" style="overflow:visible;"/>
+			<use class="coin_little" xlink:href="#coin_1_"  width="30" height="30" x="159.0685" y="73.892" style="overflow:visible;"/>
 
-			<use xlink:href="#coin_1_"  width="30" height="30" x="-15" y="-15" transform="matrix(1 0 0 -1 124.4425 122.3684)" style="overflow:visible;"/>
+			<use class="coin_little" xlink:href="#coin_1_"  width="30" height="30" x="124.4425" y="122.3684" style="overflow:visible;"/>
 
-			<use xlink:href="#coin_1_"  width="30" height="30" x="-15" y="-15" transform="matrix(1 0 0 -1 37.3827 153.0372)" style="overflow:visible;"/>
+			<use class="coin_little" xlink:href="#coin_1_"  width="30" height="30" x="37.3827" y="153.0372" style="overflow:visible;"/>
 
-			<use xlink:href="#coin_1_"  width="30" height="30" x="-15" y="-15" transform="matrix(1 0 0 -1 45.2973 339.0285)" style="overflow:visible;"/>
+			<use class="coin_little" xlink:href="#coin_1_"  width="30" height="30" x="45.2973" y="339.0285" style="overflow:visible;"/>
 
-			<use xlink:href="#coin_1_"  width="30" height="30" x="-15" y="-15" transform="matrix(1 0 0 -1 112.5707 410.2592)" style="overflow:visible;"/>
+			<use class="coin_little" xlink:href="#coin_1_"  width="30" height="30" x="112.5707" y="410.2592" style="overflow:visible;"/>
 
-			<use xlink:href="#coin_1_"  width="30" height="30" x="-15" y="-15" transform="matrix(1 0 0 -1 136.3143 519.0839)" style="overflow:visible;"/>
+			<use class="coin_little" xlink:href="#coin_1_"  width="30" height="30" x="136.3143" y="519.0839" transform="matrix(1 0 0 -1 136.3143 519.0839)" style="overflow:visible;"/>
 
-			<use xlink:href="#coin_1_"  width="30" height="30" x="-15" y="-15" transform="matrix(1 0 0 -1 191.7159 537.8809)" style="overflow:visible;"/>
+			<use class="coin_little" xlink:href="#coin_1_"  width="30" height="30" x="191.7159" y="537.8809" style="overflow:visible;"/>
 	</g>
 	<g id="coin-b">
-		<g>
+		<g class="coin_big">
 
 				<use xlink:href="#coin-b_1_"  width="118.7" height="118.7" x="-59.4" y="-59.4" transform="matrix(1 0 0 -1 416.535 302)" style="overflow:visible;"/>
 			<path class="st14" d="M446.1,272.3c-9.3,3.3-19.2,5.1-29.6,5.1c-10.4,0-20.3-1.8-29.6-5.1h-0.1c3.3,9.3,5.1,19.4,5.1,29.8
@@ -452,7 +468,7 @@
 					c0.6-0.1,1.1-0.6,1.3-1.2C440.4,295.8,439.8,295,438.9,294.8z"/>
 			</g>
 		</g>
-		<g>
+		<g class="coin_big">
 
 				<use xlink:href="#coin-b_1_"  width="118.7" height="118.7" x="-59.4" y="-59.4" transform="matrix(0.8423 0 0 -0.8423 501.2885 202.763)" style="overflow:visible;"/>
 			<path class="st14" d="M538.3,203c-7.5-3.6-14.5-8.4-20.6-14.6c-6.2-6.2-11-13.2-14.6-20.6l0,0c-3.6,7.5-8.5,14.6-14.7,20.8
@@ -471,7 +487,7 @@
 				</g>
 			</g>
 		</g>
-		<g>
+		<g class="coin_big">
 
 				<use xlink:href="#coin-b_1_"  width="118.7" height="118.7" x="-59.4" y="-59.4" transform="matrix(0.6738 0 0 -0.6738 332.535 238)" style="overflow:visible;"/>
 			<path class="st14" d="M361.3,238c-6-2.9-11.6-6.7-16.5-11.7c-4.9-4.9-8.8-10.5-11.7-16.5l0,0c-2.9,6-6.8,11.6-11.8,16.6
@@ -507,7 +523,7 @@
 					c0.3,0.4,0.4,0.9,0.4,1.5C342.9,236.7,342.9,237.1,342.7,237.5z"/>
 			</g>
 		</g>
-		<g>
+		<g class="coin_big">
 
 				<use xlink:href="#coin-b_1_"  width="118.7" height="118.7" x="-59.4" y="-59.4" transform="matrix(0.8423 0 0 -0.8423 272.535 143)" style="overflow:visible;"/>
 			<path class="st14" d="M308.3,143c-7.5-3.6-14.5-8.4-20.6-14.6c-6.2-6.2-11-13.2-14.6-20.6l0,0c-3.6,7.5-8.5,14.6-14.7,20.8
@@ -532,7 +548,7 @@
 					C274.5,158.8,273.9,158.1,273.1,158.1z"/>
 			</g>
 		</g>
-		<g>
+		<g class="coin_big">
 
 				<use xlink:href="#coin-b_1_"  width="118.7" height="118.7" x="-59.4" y="-59.4" transform="matrix(0.6738 0 0 -0.6738 224.535 40)" style="overflow:visible;"/>
 			<path class="st14" d="M244.2,20.5c-6.2,2.2-12.9,3.4-19.9,3.4c-7,0-13.7-1.2-19.9-3.4h-0.1c2.2,6.3,3.4,13,3.4,20.1
@@ -553,7 +569,7 @@
 					C229.8,44.1,228.3,42.3,228.3,40.2z"/>
 			</g>
 		</g>
-		<g>
+		<g class="coin_big">
 
 				<use xlink:href="#coin-b_1_"  width="118.7" height="118.7" x="-59.4" y="-59.4" transform="matrix(0.6738 0 0 -0.6738 58.0153 78.09)" style="overflow:visible;"/>
 			<path class="st14" d="M78,58.1c-6.2,2.2-12.9,3.4-19.9,3.4c-7,0-13.7-1.2-19.9-3.4h-0.1c2.2,6.3,3.4,13,3.4,20.1
@@ -568,7 +584,7 @@
 					 M67.5,90.5h-5.3v-8.8h-8.3v8.8h-5.3V76.2l9.5-7.2l9.5,7.2V90.5z"/>
 			</g>
 		</g>
-		<g>
+		<g class="coin_big">
 
 				<use xlink:href="#coin-b_1_"  width="118.7" height="118.7" x="-59.4" y="-59.4" transform="matrix(0.6738 0 0 -0.6738 212.4709 388.4688)" style="overflow:visible;"/>
 			<path class="st14" d="M240.8,387.9c-6-2.9-11.6-6.7-16.5-11.7c-4.9-4.9-8.8-10.5-11.7-16.5l0,0c-2.9,6-6.8,11.6-11.8,16.6
@@ -607,7 +623,7 @@
 				</g>
 			</g>
 		</g>
-		<g>
+		<g class="coin_big">
 
 				<use xlink:href="#coin-b_1_"  width="118.7" height="118.7" x="-59.4" y="-59.4" transform="matrix(0.8423 0 0 -0.8423 303.7749 498.763)" style="overflow:visible;"/>
 			<path class="st14" d="M338.3,498c-7.5-3.6-14.5-8.4-20.6-14.6c-6.2-6.2-11-13.2-14.6-20.6l0,0c-3.6,7.5-8.5,14.6-14.7,20.8
@@ -644,7 +660,7 @@
 					c-0.6,0-1.1-0.5-1.1-1.1C300.9,494.1,301.3,493.6,302,493.6z"/>
 			</g>
 		</g>
-		<g>
+		<g class="coin_big">
 
 				<use xlink:href="#coin-b_1_"  width="118.7" height="118.7" x="-59.4" y="-59.4" transform="matrix(0.6738 0 0 -0.6738 55.1804 515.4162)" style="overflow:visible;"/>
 			<path class="st14" d="M83.8,514.7c-6-2.9-11.6-6.7-16.5-11.7c-4.9-4.9-8.8-10.5-11.7-16.5l0,0c-2.9,6-6.8,11.6-11.8,16.6
@@ -667,7 +683,7 @@
 				c-0.5,0-0.9-0.4-0.9-0.9c0-0.5,0.4-0.9,0.9-0.9c0.5,0,0.9,0.4,0.9,0.9C64.8,509.2,64.4,509.6,63.9,509.6z M65.9,511.6
 				c-0.5,0-0.9-0.4-0.9-0.9c0-0.5,0.4-0.9,0.9-0.9c0.5,0,0.9,0.4,0.9,0.9C66.9,511.2,66.5,511.6,65.9,511.6z"/>
 		</g>
-		<g>
+		<g class="coin_big">
 
 				<use xlink:href="#coin-b_1_"  width="118.7" height="118.7" x="-59.4" y="-59.4" transform="matrix(0.6738 0 0 -0.6738 457.1804 503.4162)" style="overflow:visible;"/>
 			<path class="st14" d="M478,483.1c-6.2,2.2-12.9,3.4-19.9,3.4c-7,0-13.7-1.2-19.9-3.4h-0.1c2.2,6.3,3.4,13,3.4,20.1
@@ -709,7 +725,7 @@
 				</g>
 			</g>
 		</g>
-		<g>
+		<g class="coin_big">
 
 				<use xlink:href="#coin-b_1_"  width="118.7" height="118.7" x="-59.4" y="-59.4" transform="matrix(0.6738 0 0 -0.6738 582.1804 353.4162)" style="overflow:visible;"/>
 			<path class="st14" d="M603,333.1c-6.2,2.2-12.9,3.4-19.9,3.4c-7,0-13.7-1.2-19.9-3.4h-0.1c2.2,6.3,3.4,13,3.4,20.1
@@ -745,7 +761,7 @@
 					c-0.2,0.4-0.6,0.6-1,0.8C591,352.6,590.5,352.7,589.8,352.7z"/>
 			</g>
 		</g>
-		<g>
+		<g class="coin_big">
 
 				<use xlink:href="#coin-b_1_"  width="118.7" height="118.7" x="-59.4" y="-59.4" transform="matrix(1 0 0 -1 132.6175 234.0899)" style="overflow:visible;"/>
 			<path class="st14" d="M163,203.1c-9.4,3.3-19.4,5.1-29.9,5.1c-10.5,0-20.5-1.8-29.9-5.1h-0.1c3.3,9.4,5.1,19.6,5.1,30.1
@@ -781,19 +797,33 @@
 </svg>
 </div>
 
-
+<div class="top-section-0">
+    <img src="img/coin-fall-still.svg" id="coin-fall-still" class="coin-fall">
+</div>
+<div class="top-section-0">
+    <img src="img/coin-fall.svg" id="coin-fall" class="coin-fall">
+</div>
 <div class="bottom-section-5">
-    <img src="img/title.svg" style="width: 202px;">
+    <img src="img/title.svg" style="width: 202px;" class="animated infinite tada" id="page-two-title">
 </div>
 
 </div>
 <div id="three" data-role="page">
-    <h1>Page 3</h1>
-    <a transition="fade" href="#four" data-dom-cache="true">Back</a>
+    <div class="top-section-0">
+        <img src="img/c-1.svg" style="width: 258px;">
+    </div>
+    <div class="bottom-section-5">
+        <img src="img/logo.svg" style="width: 120px;">
+    </div>
 </div>
 <div id="four" data-role="page">
-    <h1>Page 4</h1>
-    <a transition="fade" href="#one" data-dom-cache="true">Back</a>
+    <div class="top-section-0">
+        <img src="img/d-1.svg" style="width: 100%;" class="animated infinite fadeInUp">
+        <img src="img/d-2.svg" style="width: 100%;">
+    </div>
+    <div class="bottom-section-5">
+        <img src="img/logo.svg" style="width: 120px;">
+    </div>
 </div>
 
 <script type="text/javascript" src="lib/zepto.min.js"></script>
@@ -801,8 +831,93 @@
 <script src="app.js"></script>
 <script type="text/javascript">
     $(document).ready(function() {
+        $('#yang_1_').hide();
+        $('#nian_1_').hide();
+        $('#da_1_').hide();
+        $('#ji_1_').hide();
+        $('.coin_little').hide();
+        $('.coin_big').hide();
+        $('#page-two-title').hide();
+        $('#coin-fall-still').hide();
+        $('#coin-fall').hide();
+        var shake = 0;
+
+        //create a new instance of shake.js.
+        var myShakeEvent = new Shake({
+            threshold: 15
+        });
+
+        // start listening to device motion
+
+
+        // register a shake event
+        window.addEventListener('shake', shakeEventDidOccur, false);
+
+        //shake event callback
+        function shakeEventDidOccur () {
+            //put your own code here etc.
+            if(shake > 3){
+                $(document).transition('to', 'three');
+            }
+            else if(shake >= 1){
+                $('#coin-fall-still').show();
+                $('#coin-fall').show();
+            }
+            else if(shake == 0){
+                bigCoinShow();
+            }
+            shake += 1;
+        }
+
+        var littleCoinShow = function() {
+            $('.coin_little').each(function(index){
+                var time = Math.floor((Math.random() * 2000) + 1);
+//                                $(this).show();
+                var item = $(this);
+                window.setTimeout(function(){
+                    item.show();
+                    item.addClass('animated fadeIn');
+                },time);
+            });
+
+            myShakeEvent.start();
+        };
+
+        var bigCoinShow = function() {
+            $('.coin_big').each(function(index){
+                var time = Math.floor((Math.random() * 2000) + 1);
+//                                $(this).show();
+                var item = $(this);
+                window.setTimeout(function(){
+                    item.show();
+                    item.addClass('animated fadeIn');
+                },time);
+            });
+        };
         var treeShow = function() {
-            $('#yang').addClass('dark');
+            $('#yang_1_').show();
+            $('#yang_1_').addClass('animated bounceInDown');
+            window.setTimeout(function(){
+                $('#nian_1_').show();
+                $('#nian_1_').addClass('animated bounceInDown');
+                window.setTimeout(function(){
+                    $('#da_1_').show();
+                    $('#da_1_').addClass('animated bounceInDown');
+                    window.setTimeout(function(){
+                        $('#ji_1_').show();
+                        $('#ji_1_').addClass('animated bounceInDown');
+
+                        window.setTimeout(function(){
+                            $('#yang_1_').addClass('dark');
+                            $('#nian_1_').addClass('dark');
+                            $('#da_1_').addClass('dark');
+                            $('#ji_1_').addClass('dark');
+                            littleCoinShow();
+
+                        },400);
+                    },400);
+                },400);
+            },400);
         };
         var animation = function(e) {
             if(e.data.selector == "#two"){
