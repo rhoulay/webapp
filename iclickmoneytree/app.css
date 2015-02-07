@@ -515,3 +515,9 @@ img{
     width: 130%;
     height: 120%;
 }
+.coin-fall-animation{
+    position: absolute;
+    bottom: 0;
+    height: 10%;
+    width: 55px;
+}
