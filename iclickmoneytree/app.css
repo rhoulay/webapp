@@ -500,6 +500,10 @@ img{
     padding: 7px;
     border-radius: 10px;
 }
-svg {
-    width: 100%;
+#Layer_1 {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; /* only required for <img /> */
 }
