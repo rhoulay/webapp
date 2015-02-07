@@ -188,6 +188,7 @@
 
 <script>
     $.getJSON( "http://weixinapp.weburner.com/weixin/index.php", function( data ) {
+        console.log(data.jsapiTicket);
         wx.config({
             debug: true,
             appId: data.appId,
