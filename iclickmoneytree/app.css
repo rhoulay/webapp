@@ -519,18 +519,22 @@ img{
     position: absolute;
     bottom: 0;
     left: 10px;
-    height: 30%;
+    height: 60%;
     width: 55px;
 }
 .delay-1{
-    height: 60%;
+    -webkit-animation-delay: .4s; /* Chrome, Safari, Opera */
+    animation-delay: .4s;
 }
 .delay-2{
-    height: 37%;
+    -webkit-animation-delay: .2s; /* Chrome, Safari, Opera */
+    animation-delay: .2s;
 }
 .delay-3{
-    height: 33%;
+    -webkit-animation-delay: .1s; /* Chrome, Safari, Opera */
+    animation-delay: .1s;
 }
 .delay-4{
-    height: 21%;
+    -webkit-animation-delay: .25s; /* Chrome, Safari, Opera */
+    animation-delay: .25s;
 }
