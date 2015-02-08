@@ -538,3 +538,6 @@ img{
     -webkit-animation-delay: .25s; /* Chrome, Safari, Opera */
     animation-delay: .25s;
 }
+.animated-play{
+    -webkit-animation-play-state: running;
+}

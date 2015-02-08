@@ -801,11 +801,11 @@
     <img src="img/coin-fall-still.svg" id="coin-fall-still" class="coin-fall">
 </div>
 <div class="top-section-0" id="coin-fall">
-    <img src="img/coin-fall.svg" style="width: 55px;" class="delay-2 coin-fall-animation animated infinite fadeInDown">
-    <img src="img/coin-fall.svg" style="width: 55px; left: 20%;" class="delay-1 coin-fall-animation animated infinite fadeInDown">
-    <img src="img/coin-fall.svg" style="width: 55px; left: 40%;" class="coin-fall-animation animated infinite fadeInDown">
-    <img src="img/coin-fall.svg" style="width: 55px; left: 50%;" class="delay-3 coin-fall-animation animated infinite fadeInDown">
-    <img src="img/coin-fall.svg" style="width: 55px; left: 70%;" class="delay-4 coin-fall-animation animated infinite fadeInDown">
+    <img src="img/coin-fall.svg" style="width: 55px;" class="delay-2 coin-fall-animation">
+    <img src="img/coin-fall.svg" style="width: 55px; left: 20%;" class="delay-1 coin-fall-animation">
+    <img src="img/coin-fall.svg" style="width: 55px; left: 40%;" class="coin-fall-animation">
+    <img src="img/coin-fall.svg" style="width: 55px; left: 50%;" class="delay-3 coin-fall-animation">
+    <img src="img/coin-fall.svg" style="width: 55px; left: 70%;" class="delay-4 coin-fall-animation">
 </div>
 <div class="bottom-section-5">
     <img src="img/title.svg" style="width: 202px;" class="animated infinite tada" id="page-two-title">
@@ -835,6 +835,7 @@
 <script src="app.js"></script>
 <script type="text/javascript">
     $(document).ready(function() {
+
         $('#one').show();
 
         $('#yang_1_').hide();
@@ -844,8 +845,8 @@
         $('.coin_little').hide();
         $('.coin_big').hide();
         $('#page-two-title').hide();
-//        $('#coin-fall-still').hide();
-//        $('#coin-fall').hide();
+        $('#coin-fall-still').hide();
+        $('#coin-fall').hide();
         var shake = 0;
 
         //create a new instance of shake.js.
@@ -857,24 +858,7 @@
 
 
         // register a shake event
-        window.addEventListener('shake', shakeEventDidOccur, false);
-
-        //shake event callback
-        function shakeEventDidOccur () {
-            //put your own code here etc.
-            if(shake > 3){
-                $('#three').show();
-                $(document).transition('to', 'three');
-            }
-            else if(shake >= 1){
-                $('#coin-fall-still').show();
-                $('#coin-fall').show();
-            }
-            else if(shake == 0){
-                bigCoinShow();
-            }
-            shake += 1;
-        }
+        window.addEventListener('shake', testShake, false);
 
         var littleCoinShow = function() {
             $('.coin_little').each(function(index){
@@ -921,34 +905,66 @@
                             $('#ji_1_').addClass('dark');
                             littleCoinShow();
 
+                            window.setTimeout(function(){
+                                $('#page-two-title').show();
+                            },1000);
+
+
                         },400);
                     },400);
                 },400);
             },400);
         };
         var animation = function(e) {
+
             if(e.data.selector == "#two"){
                 console.log("Two");
                 treeShow();
             }
 
         };
-        $('#one').transition('options', {defaultPageTransition : 'slide', domCache : true});
+
+        function testAnim(x) {
+            $('.coin-fall-animation').removeClass(x + ' animated').addClass(x + ' animated').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+                $(this).removeClass(x + ' animated');
+            });
+        };
+
+        function testShake(){
+            if(shake === 4){
+                $(document).transition('to', 'three');
+            }
+            else if(shake === 3){
+                testAnim('fadeInDown');
+            }
+            else if(shake === 2){
+                testAnim('fadeInDown');
+            }
+            else if(shake === 1){
+                $('#page-two-title').hide();
+                $('#coin-fall-still').show();
+                $('#coin-fall').show();
+                testAnim('fadeInDown');
+            }
+            else if(shake === 0){
+                bigCoinShow();
+            }
+            shake += 1;
+        }
+
         $(document).on('pageshow', animation);
-        $(document).on('pageinit', function() {
+//        $(document).on('pageinit', function() {
             $('#one').on('click', function(e) {
+                console.log(e);
                 $(document).transition('to', 'two');
-                $('#two').show();
                 e.preventDefault();
             });
             $('#two').on('click', function(e) {
-                $(document).transition('to', 'three');
-                $('#three').show();
                 e.preventDefault();
+                testShake();
             });
             $('#three').on('click', function(e) {
                 $(document).transition('to', 'four');
-                $('#four').show();
                 e.preventDefault();
             });
             $('#four').on('click', function(e) {
@@ -957,7 +973,7 @@
             });
 
         });
-    });
+//    });
 </script>
 <script type="text/javascript" src="lib/shake.js"></script>
 <script type="text/javascript" src="lib/transition.min.js"></script>
