@@ -521,9 +521,8 @@ img{
     left: 10px;
     height: 60%;
     width: 55px;
-    -webkit-animation-fill-mode: forwards; /* Chrome, Safari, Opera */
-    animation-fill-mode: forwards;
-    opacity: 0;
+    -webkit-animation-fill-mode: forwards !important;
+    animation-fill-mode: forwards !important;
 }
 .delay-1{
     -webkit-animation-delay: .4s !important;
