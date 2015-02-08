@@ -801,11 +801,11 @@
     <img src="img/coin-fall-still.svg" id="coin-fall-still" class="coin-fall">
 </div>
 <div class="top-section-0" id="coin-fall">
-    <img src="img/coin-fall.svg" style="width: 55px;" class="delay-2 coin-fall-animation animated infinite fadeInDown">
-    <img src="img/coin-fall.svg" style="width: 55px; left: 20%;" class="delay-1 coin-fall-animation animated infinite fadeInDown">
-    <img src="img/coin-fall.svg" style="width: 55px; left: 40%;" class="coin-fall-animation animated infinite fadeInDown">
-    <img src="img/coin-fall.svg" style="width: 55px; left: 50%;" class="delay-3 coin-fall-animation animated infinite fadeInDown">
-    <img src="img/coin-fall.svg" style="width: 55px; left: 70%;" class="delay-4 coin-fall-animation animated infinite fadeInDown">
+    <img src="img/coin-fall.svg" id="coin-fall-1" style="width: 55px;" class="coin-fall-animation">
+    <img src="img/coin-fall.svg" id="coin-fall-2" style="width: 55px; left: 20%;" class="coin-fall-animation">
+    <img src="img/coin-fall.svg" id="coin-fall-3" style="width: 55px; left: 40%;" class="coin-fall-animation">
+    <img src="img/coin-fall.svg" id="coin-fall-4" style="width: 55px; left: 50%;" class="coin-fall-animation">
+    <img src="img/coin-fall.svg" id="coin-fall-5" style="width: 55px; left: 70%;" class="coin-fall-animation">
 </div>
 <div class="bottom-section-5">
     <img src="img/title.svg" style="width: 202px;" class="animated infinite tada" id="page-two-title">
@@ -946,9 +946,22 @@
         }
 
         function testAnim(x) {
-            $('.coin-fall-animation').removeClass(x + ' animated').addClass(x + ' animated').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+            $('#coin-fall-1').addClass(x + ' animated delay-1').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+                $(this).removeClass(x + ' animated delay-1');
+            });
+            $('#coin-fall-2').addClass(x + ' animated delay-2').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+                $(this).removeClass(x + ' animated delay-2');
+            });
+            $('#coin-fall-3').addClass(x + ' animated delay-3').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+                $(this).removeClass(x + ' animated delay-3');
+            });
+            $('#coin-fall-4').addClass(x + ' animated delay-4').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+                $(this).removeClass(x + ' animated delay-4');
+            });
+            $('#coin-fall-5').addClass(x + ' animated').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
                 $(this).removeClass(x + ' animated');
             });
+
         };
 
         function testShake(){
@@ -957,16 +970,16 @@
                 $(document).transition('to', 'three');
             }
             else if(shake === 4){
-//                testAnim('');
+                testAnim('fadeInDown');
             }
             else if(shake === 3){
-//                testAnim('');
+                testAnim('fadeInDown');
             }
             else if(shake === 2){
                 $('#page-two-title').hide();
                 $('#coin-fall-still').show();
                 $('#coin-fall').show();
-//                testAnim('fadeInDown');
+                testAnim('fadeInDown');
             }
             else if(shake === 1){
                 bigCoinShow();
