@@ -17,7 +17,7 @@
 <body>
 <div id="bg"></div>
 <!-- Add your site or application content here -->
-<div id="one" data-role="page" data-dom-cache="true">
+<div id="one" data-role="page" data-dom-cache="true" style="display: none;">
     <div class="top-section-10">
         <img src="img/cover01.png" style="width: 96px;">
         <img src="img/title.svg" style="width: 202px;" class="animated infinite tada">
@@ -834,9 +834,9 @@
 
 <script src="app.js"></script>
 <script type="text/javascript">
-
-
     $(document).ready(function() {
+        $('#one').show();
+
         $('#yang_1_').hide();
         $('#nian_1_').hide();
         $('#da_1_').hide();
