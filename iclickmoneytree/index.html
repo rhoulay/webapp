@@ -946,21 +946,37 @@
         }
 
         function testAnim(x) {
-            $('#coin-fall-1').addClass(x + ' animated delay-1').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
-                $(this).removeClass(x + ' animated delay-1');
+            window.setTimeout(function(){
+                if(shake === 0){
+                    $('#coin-fall-1').addClass(x + ' animated').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+                        $(this).removeClass(x + ' animated');
+                    });
+                }
+            },100);
+
+            window.setTimeout(function(){
+            $('#coin-fall-2').addClass(x + ' animated').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+                $(this).removeClass(x + ' animated');
             });
-            $('#coin-fall-2').addClass(x + ' animated delay-2').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
-                $(this).removeClass(x + ' animated delay-2');
+            },200);
+
+            window.setTimeout(function(){
+            $('#coin-fall-3').addClass(x + ' animated').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+                $(this).removeClass(x + ' animated');
             });
-            $('#coin-fall-3').addClass(x + ' animated delay-3').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
-                $(this).removeClass(x + ' animated delay-3');
+            },300);
+
+            window.setTimeout(function(){
+            $('#coin-fall-4').addClass(x + ' animated').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+                $(this).removeClass(x + ' animated');
             });
-            $('#coin-fall-4').addClass(x + ' animated delay-4').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
-                $(this).removeClass(x + ' animated delay-4');
-            });
+            },400);
+
+            window.setTimeout(function(){
             $('#coin-fall-5').addClass(x + ' animated').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
                 $(this).removeClass(x + ' animated');
             });
+            },500);
 
         };
 
