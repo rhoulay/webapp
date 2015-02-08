@@ -30,7 +30,7 @@
         <img src="img/logo.svg" style="width: 120px;">
     </div>
 </div>
-<div id="two" data-role="page" data-dom-cache="true">
+<div id="two" data-role="page" data-dom-cache="true" style="display: none;">
 <div class="top-section-0">
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 width="637.8px" height="775.3px" viewBox="0 0 637.8 775.3" style="enable-background:new 0 0 637.8 775.3;" xml:space="preserve"
@@ -800,19 +800,19 @@
 <div class="top-section-0">
     <img src="img/coin-fall-still.svg" id="coin-fall-still" class="coin-fall">
 </div>
-<div class="top-section-0">
-    <img src="img/coin-fall.svg" id="coin-fall" style="width: 55px;" class="delay-2 coin-fall-animation animated infinite fadeInDown">
-    <img src="img/coin-fall.svg" id="coin-fall" style="width: 55px; left: 20%;" class="delay-1 coin-fall-animation animated infinite fadeInDown">
-    <img src="img/coin-fall.svg" id="coin-fall" style="width: 55px; left: 40%;" class="coin-fall-animation animated infinite fadeInDown">
-    <img src="img/coin-fall.svg" id="coin-fall" style="width: 55px; left: 50%;" class="delay-3 coin-fall-animation animated infinite fadeInDown">
-    <img src="img/coin-fall.svg" id="coin-fall" style="width: 55px; left: 70%;" class="delay-4 coin-fall-animation animated infinite fadeInDown">
+<div class="top-section-0" id="coin-fall">
+    <img src="img/coin-fall.svg" style="width: 55px;" class="delay-2 coin-fall-animation animated infinite fadeInDown">
+    <img src="img/coin-fall.svg" style="width: 55px; left: 20%;" class="delay-1 coin-fall-animation animated infinite fadeInDown">
+    <img src="img/coin-fall.svg" style="width: 55px; left: 40%;" class="coin-fall-animation animated infinite fadeInDown">
+    <img src="img/coin-fall.svg" style="width: 55px; left: 50%;" class="delay-3 coin-fall-animation animated infinite fadeInDown">
+    <img src="img/coin-fall.svg" style="width: 55px; left: 70%;" class="delay-4 coin-fall-animation animated infinite fadeInDown">
 </div>
 <div class="bottom-section-5">
     <img src="img/title.svg" style="width: 202px;" class="animated infinite tada" id="page-two-title">
 </div>
 
 </div>
-<div id="three" data-role="page">
+<div id="three" data-role="page" style="display: none;">
     <div class="top-section-0">
         <img src="img/c-1.svg" style="width: 258px;">
     </div>
@@ -820,7 +820,7 @@
         <img src="img/logo.svg" style="width: 120px;">
     </div>
 </div>
-<div id="four" data-role="page">
+<div id="four" data-role="page" style="display: none;">
     <div class="top-section-0">
         <img src="img/d-1.svg" style="width: 100%;" class="animated infinite fadeInUp">
         <img src="img/d-2.svg" style="width: 100%;">
@@ -834,6 +834,8 @@
 
 <script src="app.js"></script>
 <script type="text/javascript">
+
+
     $(document).ready(function() {
         $('#yang_1_').hide();
         $('#nian_1_').hide();
@@ -861,6 +863,7 @@
         function shakeEventDidOccur () {
             //put your own code here etc.
             if(shake > 3){
+                $('#three').show();
                 $(document).transition('to', 'three');
             }
             else if(shake >= 1){
@@ -935,14 +938,17 @@
         $(document).on('pageinit', function() {
             $('#one').on('click', function(e) {
                 $(document).transition('to', 'two');
+                $('#two').show();
                 e.preventDefault();
             });
             $('#two').on('click', function(e) {
                 $(document).transition('to', 'three');
+                $('#three').show();
                 e.preventDefault();
             });
             $('#three').on('click', function(e) {
                 $(document).transition('to', 'four');
+                $('#four').show();
                 e.preventDefault();
             });
             $('#four').on('click', function(e) {
