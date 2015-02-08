@@ -801,11 +801,11 @@
     <img src="img/coin-fall-still.svg" id="coin-fall-still" class="coin-fall">
 </div>
 <div class="top-section-0" id="coin-fall">
-    <img src="img/coin-fall.svg" style="width: 55px;" class="delay-2 coin-fall-animation">
-    <img src="img/coin-fall.svg" style="width: 55px; left: 20%;" class="delay-1 coin-fall-animation">
-    <img src="img/coin-fall.svg" style="width: 55px; left: 40%;" class="coin-fall-animation">
-    <img src="img/coin-fall.svg" style="width: 55px; left: 50%;" class="delay-3 coin-fall-animation">
-    <img src="img/coin-fall.svg" style="width: 55px; left: 70%;" class="delay-4 coin-fall-animation">
+    <img src="img/coin-fall.svg" style="width: 55px;" class="delay-2 coin-fall-animation animated infinite fadeInDown">
+    <img src="img/coin-fall.svg" style="width: 55px; left: 20%;" class="delay-1 coin-fall-animation animated infinite fadeInDown">
+    <img src="img/coin-fall.svg" style="width: 55px; left: 40%;" class="coin-fall-animation animated infinite fadeInDown">
+    <img src="img/coin-fall.svg" style="width: 55px; left: 50%;" class="delay-3 coin-fall-animation animated infinite fadeInDown">
+    <img src="img/coin-fall.svg" style="width: 55px; left: 70%;" class="delay-4 coin-fall-animation animated infinite fadeInDown">
 </div>
 <div class="bottom-section-5">
     <img src="img/title.svg" style="width: 202px;" class="animated infinite tada" id="page-two-title">
@@ -957,16 +957,16 @@
                 $(document).transition('to', 'three');
             }
             else if(shake === 4){
-                testAnim('fadeInDown');
+//                testAnim('');
             }
             else if(shake === 3){
-                testAnim('fadeInDown');
+//                testAnim('');
             }
             else if(shake === 2){
                 $('#page-two-title').hide();
                 $('#coin-fall-still').show();
                 $('#coin-fall').show();
-                testAnim('fadeInDown');
+//                testAnim('fadeInDown');
             }
             else if(shake === 1){
                 bigCoinShow();
