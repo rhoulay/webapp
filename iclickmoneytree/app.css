@@ -525,24 +525,18 @@ img{
     animation-fill-mode: forwards !important;
 }
 .delay-1{
-    -webkit-animation-delay: .4s !important;
-    animation-delay: .4s !important;
+    -webkit-animation-delay: .5s !important;
+    animation-delay: .5s !important;
 }
 .delay-2{
-    -webkit-animation-delay: .2s !important;
-    animation-delay: .2s !important;
+    -webkit-animation-delay: 1s !important;
+    animation-delay: 1s !important;
 }
 .delay-3{
-    animation-delay: .1s;
-    -moz-animation-delay: .1s;
-    -webkit-animation-delay: .1s;
-    -o-animation-delay: .1s;
-    transition-delay: .1s;
-    -webkit-transition-delay: .1s;
-    -moz-transition-delay: .1s;
-    -o-transition-delay: .1s;
+    -webkit-animation-delay: 1.5s !important;
+    animation-delay: 1.5s !important;
 }
 .delay-4{
-    -webkit-animation-delay: .25s !important;
-    animation-delay: .25s !important;
+    -webkit-animation-delay: 2s !important;
+    animation-delay: 2s !important;
 }
