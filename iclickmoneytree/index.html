@@ -865,7 +865,7 @@
         //create a new instance of shake.js.
         var myShakeEvent = new Shake({
             threshold: 8,
-            timeout: 500
+            timeout: 300
         });
 
         // start listening to device motion
@@ -974,26 +974,34 @@
         $(document).on('pageshow', animation);
         $(document).on('pagehide', whenPageHide);
 //        $(document).on('pageinit', function() {
-            $('#one').on('click', function(e) {
-                console.log(e);
-                $(document).transition('to', 'two');
-                e.preventDefault();
-            });
-            $('#two').on('click', function(e) {
-                e.preventDefault();
-                testShake();
-            });
-            $('#three').on('click', function(e) {
-                $(document).transition('to', 'four');
-                e.preventDefault();
-            });
-            $('#four').on('click', function(e) {
-                $(document).transition('to', 'one');
-                e.preventDefault();
-            });
-
+        $('#one').on('click', function(e) {
+            console.log(e);
+            $(document).transition('to', 'two');
+            e.preventDefault();
         });
-//    });
+//        $('#two').on('click', function(e) {
+//            e.preventDefault();
+//            testShake();
+//        });
+        $('#three').on('click', function(e) {
+            $(document).transition('to', 'four');
+            e.preventDefault();
+        });
+//        $('#four').on('click', function(e) {
+//            $(document).transition('to', 'one');
+//            e.preventDefault();
+//        });
+
+        window.setTimeout(function(){
+            $(document).transition('to', 'two');
+        },2000);
+
+    });
+
+    window.setTimeout(function(){
+
+    },2000);
+    //    });
 </script>
 <script type="text/javascript" src="lib/shake.js"></script>
 <script type="text/javascript" src="lib/transition.min.js"></script>
