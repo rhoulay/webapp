@@ -947,35 +947,33 @@
 
         function testAnim(x) {
             window.setTimeout(function(){
-                if(shake === 0){
-                    $('#coin-fall-1').addClass(x + ' animated').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
-                        $(this).removeClass(x + ' animated');
-                    });
-                }
-            },100);
+                $('#coin-fall-1').addClass(x + ' animated').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+                    $(this).removeClass(x + ' animated');
+                });
+            },1000);
 
             window.setTimeout(function(){
-            $('#coin-fall-2').addClass(x + ' animated').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
-                $(this).removeClass(x + ' animated');
-            });
+                $('#coin-fall-2').addClass(x + ' animated').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+                    $(this).removeClass(x + ' animated');
+                });
             },200);
 
             window.setTimeout(function(){
-            $('#coin-fall-3').addClass(x + ' animated').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
-                $(this).removeClass(x + ' animated');
-            });
+                $('#coin-fall-3').addClass(x + ' animated').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+                    $(this).removeClass(x + ' animated');
+                });
             },300);
 
             window.setTimeout(function(){
-            $('#coin-fall-4').addClass(x + ' animated').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
-                $(this).removeClass(x + ' animated');
-            });
+                $('#coin-fall-4').addClass(x + ' animated').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+                    $(this).removeClass(x + ' animated');
+                });
             },400);
 
             window.setTimeout(function(){
-            $('#coin-fall-5').addClass(x + ' animated').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
-                $(this).removeClass(x + ' animated');
-            });
+                $('#coin-fall-5').addClass(x + ' animated').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+                    $(this).removeClass(x + ' animated');
+                });
             },500);
 
         };
