@@ -105,7 +105,6 @@ Built by David Kaneda and maintained by Jonathan Stark.
         -moz-animation-name: slideinfrombottom;
         transform: translateY(0);
         animation-name: slideinfrombottom;
-        z-index: 10;
 }
 
 .slideup.in.reverse {
@@ -115,7 +114,7 @@ Built by David Kaneda and maintained by Jonathan Stark.
     -moz-animation-name: slideinfromtop;
     transform: translateY(100%);
     animation-name: slideinfromtop;
-        z-index: 0;
+
 }
 
 .slideup.out.reverse {
@@ -125,7 +124,7 @@ Built by David Kaneda and maintained by Jonathan Stark.
         -moz-animation-name: slideouttobottom;
         transform: translateY(100%);
         animation-name: slideouttobottom;
-        z-index: 10;
+
 }
 
 .slidedown.out {

@@ -877,7 +877,6 @@
             $('#page-two-title').hide();
             $('#coin-fall-still').hide();
             $('#coin-fall').hide();
-            $('.result').hide();
             shake = 0;
         }
         function initPageThree(){
@@ -966,7 +965,6 @@
         };
 
         function whenPageHide(e) {
-            console.log(e);
             if(e.srcElement.id == "two"){
                 initPageTwo();
             }
@@ -1029,18 +1027,16 @@
             e.preventDefault();
         });
 
-//        $('#two').on('click', function(e) {
-//            e.preventDefault();
-//            testShake();
-//        });
+        $('#two').on('click', function(e) {
+            e.preventDefault();
+            testShake();
+        });
         $('#three').on('click', function(e) {
             $(document).transition('to', 'four', 'slideup');
             e.preventDefault();
         });
-        $('#three').swipeUp(function(){
-            $(document).transition('to', 'four', 'slideup');
-        });
-        $('#four').swipeDown(function(){
+
+        $('#four').on('click', function(e) {
             window.history.back();
         });
 //        $('#four').on('click', function(e) {
