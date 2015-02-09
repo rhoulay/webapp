@@ -16,16 +16,22 @@
         function init() {
             var myAudio = document.getElementById("audio");
             myAudio.addEventListener('ended', loopAudio, false);
-            myAudio.play();
+
+            $("#divplayer").empty();
+            // append video tag
+            $("#divplayer").append('<audio id="audio" src="img/bg.mp3" style="display: none;position: absolute"></audio>');
+            $('audio').get(0).play();
         }
         function loopAudio() {
             var myAudio = document.getElementById("audio");
             myAudio.play();
         }
+
     </script>
 </head>
 
 <body onload="init();">
+<div id="divplayer"></div>
 <audio id="audio" src="img/bg.mp3" style="display: none;position: absolute"></audio>
 <div id="bg"></div>
 <!-- Add your site or application content here -->
