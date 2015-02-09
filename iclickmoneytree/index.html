@@ -831,6 +831,7 @@
 </div>
 
 <script type="text/javascript" src="lib/zepto.min.js"></script>
+<script type="text/javascript" src="lib/touch.js"></script>
 
 <script src="app.js"></script>
 <script type="text/javascript">
@@ -981,15 +982,13 @@
             e.preventDefault();
         });
 
-        $('#two').on('click', function(e) {
+//        $('#two').on('click', function(e) {
+//            e.preventDefault();
+//            testShake();
+//        });
+        $('#three').on('click', function(e) {
+            $(document).transition('to', 'four', 'slideup');
             e.preventDefault();
-            testShake();
-        });
-        $(document).on('pageinit', function() {
-            $('#three').on('click', function(e) {
-                $(document).transition('to', 'four', 'slideup');
-                e.preventDefault();
-            });
         });
         $('#three').swipeDown(function(){
             $(document).transition('to', 'four', 'slideup');
