@@ -872,14 +872,10 @@
             $('#page-two-title').hide();
             $('#coin-fall-still').hide();
             $('#coin-fall').hide();
-            $('.result').hide();
             shake = 0;
         }
         function initPageThree(){
-            $('.result').each(function(index){
-                $(this).hide();
-            });
-            console.log($('.result'));
+            $('.result').hide();
             $('#result-before').show();
         }
 
@@ -974,7 +970,7 @@
         function pageBeforeShow(e){
 
             if(e.srcElement.id == "three"){
-                console.log(e);
+//                console.log(e);
                 showResult();
             }
         }
