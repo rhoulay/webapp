@@ -494,6 +494,11 @@ img{
     position: absolute;
     bottom: 0;
 }
+.bottom-section-20px{
+    width: 100%;
+    position: absolute;
+    bottom: 20px;
+}
 .loading{
     background-color: rgba(0,0,0,.4);
     width: 20%;
