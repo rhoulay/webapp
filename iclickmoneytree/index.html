@@ -9,7 +9,7 @@
     <meta name='viewport' content='width=device-width, initial-scale=1.0; maximum-scale=1.0; user-scalable=0;' />
     <meta http-equiv="cleartype" content="on">
 
-    <link rel="stylesheet" href="lib/transition.min.css">
+    <link rel="stylesheet" href="lib/transition.css">
     <link rel="stylesheet" href="lib/animate.min.css">
     <link rel="stylesheet" href="app.css">
 </head>
@@ -947,9 +947,9 @@
 
         function testAnim(x) {
 
-                $('.coin-fall-animation').addClass(x + ' animated').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
-                    $(this).removeClass(x + ' animated');
-                });
+            $('.coin-fall-animation').addClass(x + ' animated').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+                $(this).removeClass(x + ' animated');
+            });
 
 
 
@@ -986,14 +986,21 @@
             $(document).transition('to', 'two');
             e.preventDefault();
         });
-//        $('#two').on('click', function(e) {
-//            e.preventDefault();
-//            testShake();
-//        });
-        $('#three').on('click', function(e) {
-            $(document).transition('to', 'four');
+
+        $('#two').on('click', function(e) {
             e.preventDefault();
+            testShake();
         });
+        $(document).on('pageinit', function() {
+            $('#three').on('click', function(e) {
+                $(document).transition('to', 'four', 'slideup');
+                e.preventDefault();
+            });
+        });
+        $('#three').swipeDown(function(){
+            $(document).transition('to', 'four', 'slideup');
+            e.preventDefault();
+        })
 //        $('#four').on('click', function(e) {
 //            $(document).transition('to', 'one');
 //            e.preventDefault();
@@ -1009,4 +1016,7 @@
 </script>
 <script type="text/javascript" src="lib/shake.js"></script>
 <script type="text/javascript" src="lib/transition.min.js"></script>
+<script>
+
+</script>
 </body>
