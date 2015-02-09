@@ -835,6 +835,7 @@
 
 <script src="app.js"></script>
 <script type="text/javascript">
+    document.ontouchmove = function(e) {e.preventDefault()};
     $(document).ready(function() {
 
         $('#one').show();
@@ -982,15 +983,15 @@
             e.preventDefault();
         });
 
-//        $('#two').on('click', function(e) {
-//            e.preventDefault();
-//            testShake();
-//        });
+        $('#two').on('click', function(e) {
+            e.preventDefault();
+            testShake();
+        });
         $('#three').on('click', function(e) {
             $(document).transition('to', 'four', 'slideup');
             e.preventDefault();
         });
-        $('#three').swipeDown(function(){
+        $('#three').swipeUp(function(){
             $(document).transition('to', 'four', 'slideup');
             e.preventDefault();
         })
