@@ -15,7 +15,7 @@
 </head>
 
 <body style="-webkit-app-region: drag">
-
+<audio id="zxzz" src="img/bg.mp3" autoplay loop style="display: none;position: absolute"></audio>
 <div id="bg"></div>
 <!-- Add your site or application content here -->
 <div id="one" data-role="page" data-dom-cache="true" style="display: none;">
@@ -848,12 +848,6 @@
 <script type="text/javascript">
     document.ontouchmove = function(e) {e.preventDefault()};
     $(document).ready(function() {
-        var audio = new Audio("img/bg.mp3");
-        audio.addEventListener('ended', function() {
-            this.currentTime = 0;
-            this.play();
-        }, false);
-        audio.play();
 
         $('#one').show();
         $('#yang_1_').hide();
