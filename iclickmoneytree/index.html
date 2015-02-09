@@ -15,6 +15,7 @@
 </head>
 
 <body style="-webkit-app-region: drag">
+<audio id="zxzz" src="img/bg.mp3" autoplay loop style="display: none;position: absolute"></audio>
 <div id="bg"></div>
 <!-- Add your site or application content here -->
 <div id="one" data-role="page" data-dom-cache="true" style="display: none;">
@@ -1046,16 +1047,9 @@
         $(document).on('pagehide', whenPageHide);
         $(document).on('pagebeforeshow', pageBeforeShow);
 
-
-        var mySound = new buzz.sound("img/bg.mp3");
-        mySound.play();
     });
-
-
-
     //    });
 </script>
-<script type="text/javascript" src="lib/buzz.min.js"></script>
 <script type="text/javascript" src="lib/shake.js"></script>
 <script type="text/javascript" src="lib/transition.min.js"></script>
 <script>
