@@ -12,27 +12,10 @@
     <link rel="stylesheet" href="lib/transition.css">
     <link rel="stylesheet" href="lib/animate.min.css">
     <link rel="stylesheet" href="app.css">
-    <script type="text/javascript">
-        function init() {
-            var myAudio = document.getElementById("audio");
-            myAudio.addEventListener('ended', loopAudio, false);
-
-            $("#divplayer").empty();
-            // append video tag
-            $("#divplayer").append('<audio id="audio" src="img/bg.mp3" style="display: none;position: absolute"></audio>');
-            $('audio').get(0).play();
-        }
-        function loopAudio() {
-            var myAudio = document.getElementById("audio");
-            myAudio.play();
-        }
-
-    </script>
 </head>
 
-<body onload="init();">
-<div id="divplayer"></div>
-<audio id="audio" src="img/bg.mp3" style="display: none;position: absolute"></audio>
+<body style="-webkit-app-region: drag">
+<audio id="zxzz" src="img/bg.mp3" autoplay loop style="display: none;position: absolute"></audio>
 <div id="bg"></div>
 <!-- Add your site or application content here -->
 <div id="one" data-role="page" data-dom-cache="true" style="display: none;">
@@ -867,7 +850,6 @@
     document.ontouchmove = function(e) {e.preventDefault()};
     $(document).ready(function() {
 
-
         $('#one').show();
         $('#yang_1_').hide();
         $('#nian_1_').hide();
@@ -1030,6 +1012,7 @@
             }
             else if(shake === 1){
                 bigCoinShow();
+                document.getElementById('zxzz').play();
             }
 
         }
