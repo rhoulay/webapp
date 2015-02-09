@@ -994,7 +994,10 @@
         $('#three').swipeUp(function(){
             $(document).transition('to', 'four', 'slideup');
             e.preventDefault();
-        })
+        });
+        $('#four').swipeUp(function(){
+            window.history.back();
+        });
 //        $('#four').on('click', function(e) {
 //            $(document).transition('to', 'one');
 //            e.preventDefault();
