@@ -538,3 +538,14 @@ p{
   display: none;
   position: absolute;
 }
+* {
+    -webkit-touch-callout: none;
+    -webkit-text-size-adjust: none;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-user-select: none;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+html, body {
+    overflow: hidden;
+    height: 100%;
+}
