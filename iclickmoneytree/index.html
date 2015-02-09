@@ -814,8 +814,14 @@
 
 </div>
 <div id="three" data-role="page" style="display: none;">
-    <div class="top-section-0">
+    <div class="top-section-0" class="result" id="result-1" style="display: none;">
         <img src="img/c-1.svg" style="width: 258px;">
+    </div>
+    <div class="top-section-0" class="result" id="result-2" style="display: none;">
+        <img src="img/c-2.svg" style="width: 258px;">
+    </div>
+    <div class="top-section-0" class="result" id="result-3" style="display: none;">
+        <img src="img/c-3.svg" style="width: 258px;">
     </div>
     <div class="bottom-section-5">
         <img src="img/logo.svg" style="width: 120px;">
@@ -846,6 +852,7 @@
         $('#ji_1_').hide();
         $('.coin_little').hide();
         $('.coin_big').hide();
+        $('.result').hide();
         $('#page-two-title').hide();
         $('#coin-fall-still').hide();
         $('#coin-fall').hide();
@@ -958,10 +965,17 @@
 
         };
 
+        function showResult(){
+            var list=['result-1', 'result-2', 'result-3'];
+            var result = "#" + list[Math.floor((Math.random() * 2) + 0)];
+            $(result).show();
+        }
+
         function testShake(){
             shake += 1;
             if(shake === 3){
                 $(document).transition('to', 'three');
+                showResult();
             }
             else if(shake === 2){
                 $('#page-two-title').hide();
@@ -984,10 +998,10 @@
             e.preventDefault();
         });
 
-//        $('#two').on('click', function(e) {
-//            e.preventDefault();
-//            testShake();
-//        });
+        $('#two').on('click', function(e) {
+            e.preventDefault();
+            testShake();
+        });
         $('#three').on('click', function(e) {
             $(document).transition('to', 'four', 'slideup');
             e.preventDefault();
