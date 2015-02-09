@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="app.css">
 </head>
 
-<body>
+<body style="-webkit-app-region: drag">
 <div id="bg"></div>
 <!-- Add your site or application content here -->
 <div id="one" data-role="page" data-dom-cache="true" style="display: none;">
@@ -957,14 +957,8 @@
 
         function testShake(){
             shake += 1;
-            if(shake === 5){
+            if(shake === 3){
                 $(document).transition('to', 'three');
-            }
-            else if(shake === 4){
-                testAnim('fadeInDown');
-            }
-            else if(shake === 3){
-                testAnim('fadeInDown');
             }
             else if(shake === 2){
                 $('#page-two-title').hide();
