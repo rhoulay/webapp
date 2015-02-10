@@ -556,3 +556,7 @@ html, body {
     overflow: hidden;
     height: 100%;
 }
+.result img{
+    height: auto;
+    width: 75%;
+}

@@ -17,18 +17,19 @@
 <body style="-webkit-app-region: drag">
 <audio id="zxzz" src="img/bg.mp3" autoplay loop style="display: none;position: absolute"></audio>
 <div id="bg"></div>
+<div id="main-container" style="position: relative; margin:0 auto; width: 600px; height: 100%;">
 <!-- Add your site or application content here -->
 <div id="one" data-role="page" data-dom-cache="true" style="display: none;">
     <div class="top-section-10">
-        <img src="img/cover01.png" style="width: 96px;">
-        <img src="img/title.svg" style="width: 202px;" class="animated infinite tada">
+        <img src="img/cover01.png" style="width: 192px;">
+        <img src="img/title-e.svg" style="width: 404px;" class="animated infinite tada">
         <div class="padding-20"></div>
-        <img src="img/cover02.png" style="width: 192px;">
+        <img src="img/cover02.png" style="width: 384px;">
         <div class="padding-20"></div>
         <div class="loading animated infinite pulse">loading...</div>
     </div>
     <div class="bottom-section-5">
-        <img src="img/logo.svg" style="width: 120px;">
+        <img src="img/logo.svg" style="width: 240px;">
     </div>
 </div>
 <div id="two" data-role="page" data-dom-cache="true" style="display: none;">
@@ -799,58 +800,60 @@
 </div>
 
 <div class="top-section-0">
-    <img src="img/coin-fall-still.svg" id="coin-fall-still" class="coin-fall">
+    <img src="img/coin-fall-still.svg" id="coin-fall-still" class="coin-fall" style="width: 90%;left: 15%;">
 </div>
 <div class="top-section-0" id="coin-fall">
-    <img src="img/coin-fall.svg" id="coin-fall-1" style="width: 55px;" class="delay-1 coin-fall-animation">
-    <img src="img/coin-fall.svg" id="coin-fall-2" style="width: 55px; left: 20%;" class="delay-3 coin-fall-animation">
-    <img src="img/coin-fall.svg" id="coin-fall-3" style="width: 55px; left: 40%;" class="coin-fall-animation">
-    <img src="img/coin-fall.svg" id="coin-fall-4" style="width: 55px; left: 50%;" class="delay-4 coin-fall-animation">
-    <img src="img/coin-fall.svg" id="coin-fall-5" style="width: 55px; left: 70%;" class="delay-2 coin-fall-animation">
+    <img src="img/coin-fall.svg" id="coin-fall-1" style="width: 75px;" class="delay-1 coin-fall-animation">
+    <img src="img/coin-fall.svg" id="coin-fall-2" style="width: 75px; left: 20%;" class="delay-3 coin-fall-animation">
+    <img src="img/coin-fall.svg" id="coin-fall-3" style="width: 75px; left: 40%;" class="coin-fall-animation">
+    <img src="img/coin-fall.svg" id="coin-fall-4" style="width: 75px; left: 50%;" class="delay-4 coin-fall-animation">
+    <img src="img/coin-fall.svg" id="coin-fall-5" style="width: 75px; left: 70%;" class="delay-2 coin-fall-animation">
 </div>
 <div class="bottom-section-5">
-    <img src="img/title.svg" style="width: 202px;" class="animated infinite tada" id="page-two-title">
+    <img src="img/title-e.svg" style="width: 303px;" class="animated infinite tada" id="page-two-title">
 </div>
 
 </div>
 <div id="three" data-role="page" style="display: none;">
     <div class="top-section-0" id="result-before">
         <div class="padding-50"></div>
-        <img src="img/c-before.svg" style="width: 268px;">
+        <img src="img/c-before.svg" style="width: 536px;">
     </div>
     <div class="top-section-0 result" id="result-1" style="display: none;">
-        <img src="img/c-1.svg" style="width: 258px;">
+        <img src="img/c-1.svg">
     </div>
     <div class="top-section-0 result" id="result-2" style="display: none;">
-        <img src="img/c-2.svg" style="width: 258px;">
+        <img src="img/c-2.svg">
     </div>
     <div class="top-section-0 result" id="result-3" style="display: none;">
-        <img src="img/c-3.svg" style="width: 258px;">
+        <img src="img/c-3.svg">
     </div>
     <div class="bottom-section-20px">
-        <img src="img/logo.svg" style="width: 120px;">
-        <img src="img/arrow-down.svg" style="width: 15px;padding-top:30px;" class="animated infinite bounce">
+        <img src="img/logo.svg" style="width: 240px;">
     </div>
 </div>
-<div id="four" data-role="page" style="display: none;">
-    <div class="top-section-0">
-        <img src="img/d-1.svg" style="width: 100%;" class="animated infinite bounceIn">
-        <img src="img/d-2.svg" style="width: 100%;">
-    </div>
-    <div class="bottom-section-5">
-        <img src="img/logo.svg" style="width: 120px;">
-    </div>
 </div>
-
 <script type="text/javascript" src="lib/zepto.min.js"></script>
 <script type="text/javascript" src="lib/touch.js"></script>
 
 <script src="app.js"></script>
 <script type="text/javascript">
-    document.ontouchmove = function(e) {e.preventDefault()};
-    $(document).ready(function() {
+document.ontouchmove = function(e) {e.preventDefault()};
+$(document).ready(function() {
 
-        $('#one').show();
+    $('#one').show();
+    $('#yang_1_').hide();
+    $('#nian_1_').hide();
+    $('#da_1_').hide();
+    $('#ji_1_').hide();
+    $('.coin_little').hide();
+    $('.coin_big').hide();
+    $('#page-two-title').hide();
+    $('#coin-fall-still').hide();
+    $('#coin-fall').hide();
+    var shake = 0;
+
+    function initPageTwo(){
         $('#yang_1_').hide();
         $('#nian_1_').hide();
         $('#da_1_').hide();
@@ -860,199 +863,178 @@
         $('#page-two-title').hide();
         $('#coin-fall-still').hide();
         $('#coin-fall').hide();
-        var shake = 0;
-
-        function initPageTwo(){
-            $('#yang_1_').hide();
-            $('#nian_1_').hide();
-            $('#da_1_').hide();
-            $('#ji_1_').hide();
-            $('.coin_little').hide();
-            $('.coin_big').hide();
-            $('#page-two-title').hide();
-            $('#coin-fall-still').hide();
-            $('#coin-fall').hide();
-            shake = 0;
-        }
-        function initPageThree(){
-            $('.result').hide();
-            $('#result-before').show();
-        }
+        shake = 0;
+    }
+    function initPageThree(){
+        $('.result').hide();
+        $('#result-before').show();
+    }
 
 
-        //create a new instance of shake.js.
-        var myShakeEvent = new Shake({
-            threshold: 10,
-            timeout: 1000
+    //create a new instance of shake.js.
+    var myShakeEvent = new Shake({
+        threshold: 10,
+        timeout: 1000
+    });
+
+    // start listening to device motion
+
+
+    // register a shake event
+    window.addEventListener('shake', testShake, false);
+
+    var littleCoinShow = function() {
+        $('.coin_little').each(function(index){
+            var time = Math.floor((Math.random() * 2000) + 1);
+//                                $(this).show();
+            var item = $(this);
+            window.setTimeout(function(){
+                item.show();
+                item.addClass('animated fadeIn');
+            },time);
         });
 
-        // start listening to device motion
+        myShakeEvent.start();
+    };
 
-
-        // register a shake event
-        window.addEventListener('shake', testShake, false);
-
-        var littleCoinShow = function() {
-            $('.coin_little').each(function(index){
-                var time = Math.floor((Math.random() * 2000) + 1);
+    var bigCoinShow = function() {
+        $('.coin_big').each(function(index){
+            var time = Math.floor((Math.random() * 2000) + 1);
 //                                $(this).show();
-                var item = $(this);
-                window.setTimeout(function(){
-                    item.show();
-                    item.addClass('animated fadeIn');
-                },time);
-            });
-
-            myShakeEvent.start();
-        };
-
-        var bigCoinShow = function() {
-            $('.coin_big').each(function(index){
-                var time = Math.floor((Math.random() * 2000) + 1);
-//                                $(this).show();
-                var item = $(this);
-                window.setTimeout(function(){
-                    item.show();
-                    item.addClass('animated fadeIn');
-                },time);
-            });
-        };
-        var treeShow = function() {
-            $('#yang_1_').show();
-            $('#yang_1_').addClass('animated bounceInDown');
+            var item = $(this);
             window.setTimeout(function(){
-                $('#nian_1_').show();
-                $('#nian_1_').addClass('animated bounceInDown');
+                item.show();
+                item.addClass('animated fadeIn');
+            },time);
+        });
+    };
+    var treeShow = function() {
+        $('#yang_1_').show();
+        $('#yang_1_').addClass('animated bounceInDown');
+        window.setTimeout(function(){
+            $('#nian_1_').show();
+            $('#nian_1_').addClass('animated bounceInDown');
+            window.setTimeout(function(){
+                $('#da_1_').show();
+                $('#da_1_').addClass('animated bounceInDown');
                 window.setTimeout(function(){
-                    $('#da_1_').show();
-                    $('#da_1_').addClass('animated bounceInDown');
+                    $('#ji_1_').show();
+                    $('#ji_1_').addClass('animated bounceInDown');
+
                     window.setTimeout(function(){
-                        $('#ji_1_').show();
-                        $('#ji_1_').addClass('animated bounceInDown');
+                        $('#yang_1_').addClass('dark');
+                        $('#nian_1_').addClass('dark');
+                        $('#da_1_').addClass('dark');
+                        $('#ji_1_').addClass('dark');
+                        littleCoinShow();
 
                         window.setTimeout(function(){
-                            $('#yang_1_').addClass('dark');
-                            $('#nian_1_').addClass('dark');
-                            $('#da_1_').addClass('dark');
-                            $('#ji_1_').addClass('dark');
-                            littleCoinShow();
-
-                            window.setTimeout(function(){
-                                if(shake === 0){
-                                    $('#page-two-title').show();
-                                }
-                            },2000);
-                        },400);
+                            if(shake === 0){
+                                $('#page-two-title').show();
+                            }
+                        },2000);
                     },400);
                 },400);
             },400);
-        };
-        var animation = function(e) {
+        },400);
+    };
+    var animation = function(e) {
 
-            if(e.data.selector == "#two"){
+        if(e.data.selector == "#two"){
 
-                treeShow();
-            }
+            treeShow();
+        }
+        if(e.data.selector == "#three"){
+            showResult();
+        }
 
-        };
+    };
 
-        function whenPageHide(e) {
-            if(e.srcElement.id == "two"){
-                initPageTwo();
-            }
-            if(e.srcElement.id == "three"){
-                initPageThree();
-            }
+    function whenPageHide(e) {
+//            console.log(e);
+        if(e.srcElement.id == "two"){
+            initPageTwo();
+        }
+        if(e.srcElement.id == "three"){
+            initPageThree();
 
         }
 
-        function pageBeforeShow(e){
+    }
 
-            if(e.srcElement.id == "three"){
-//                console.log(e);
-                showResult();
-            }
-        }
+    function pageBeforeShow(e){
 
-        function testAnim(x) {
-
-            $('.coin-fall-animation').addClass(x + ' animated').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
-                $(this).removeClass(x + ' animated');
-            });
-
-
-
-        };
-
-        function showResult(){
-            window.setTimeout(function(){
-                $('#result-before').hide();
-                var list=['result-1', 'result-2', 'result-3'];
-                var result = "#" + list[Math.floor((Math.random() * 2) + 0)];
-                $(result).show();
-            },1500);
-        }
-
-        function testShake(){
-            shake += 1;
-            if(shake === 3){
-                $(document).transition('to', 'three');
+//            if(e.srcElement.id == "three"){
+////                console.log(e);
 //                showResult();
-            }
-            else if(shake === 2){
-                $('#page-two-title').hide();
-                $('#coin-fall-still').show();
-                $('#coin-fall').show();
-                testAnim('fadeInDown');
-            }
-            else if(shake === 1){
-                bigCoinShow();
-            }
+//            }
+    }
 
+    function testAnim(x) {
+
+        $('.coin-fall-animation').addClass(x + ' animated').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+            $(this).removeClass(x + ' animated');
+        });
+
+
+
+    };
+
+    function showResult(){
+        window.setTimeout(function(){
+            $('#result-before').hide();
+            var list=['result-1', 'result-2', 'result-3'];
+            var result = "#" + list[Math.floor((Math.random() * 2) + 0)];
+            $(result).show();
+        },1500);
+    }
+
+    function testShake(){
+        shake += 1;
+        if(shake === 3){
+            $(document).transition('to', 'three');
+//                showResult();
         }
+        else if(shake === 2){
+            $('#page-two-title').hide();
+            $('#coin-fall-still').show();
+            $('#coin-fall').show();
+            testAnim('fadeInDown');
+        }
+        else if(shake === 1){
+            bigCoinShow();
+        }
+
+    }
 
 
 //        $(document).on('pageinit', function() {
-        $('#one').on('click', function(e) {
-            console.log(e);
-            $(document).transition('to', 'two');
-            e.preventDefault();
-        });
-
-        $('#two').on('click', function(e) {
-            e.preventDefault();
-            testShake();
-        });
-        $('#three').on('click', function(e) {
-            $(document).transition('to', 'four', 'slideup');
-            e.preventDefault();
-        });
-
-        $('#four').on('click', function(e) {
-            window.history.back();
-        });
-//        $('#four').on('click', function(e) {
-//            $(document).transition('to', 'one');
-//            e.preventDefault();
-//        });
-
-        window.setTimeout(function(){
-            $(document).transition('to', 'two');
-        },2000);
-
-        $(document).on('pageshow', animation);
-        $(document).on('pagehide', whenPageHide);
-        $(document).on('pagebeforeshow', pageBeforeShow);
-
+    $('#one').on('click', function(e) {
+        console.log(e);
+        $(document).transition('to', 'two');
+        e.preventDefault();
     });
 
+    $('#two').on('click', function(e) {
+        e.preventDefault();
+        testShake();
+    });
+    window.setTimeout(function(){
+        $(document).transition('to', 'two');
+    },2000);
+
+    $(document).on('pageshow', animation);
+    $(document).on('pagehide', whenPageHide);
+    $(document).on('pagebeforeshow', pageBeforeShow);
 
 
-    //    });
+    $('#main-container').width($('#main-container').height() * .75);
+});
+
+
+
+//    });
 </script>
 <script type="text/javascript" src="lib/shake.js"></script>
 <script type="text/javascript" src="lib/transition.min.js"></script>
-<script>
-
-</script>
 </body>
