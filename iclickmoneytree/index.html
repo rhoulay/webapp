@@ -15,17 +15,18 @@
 </head>
 
 <body style="-webkit-app-region: drag">
-<audio id="zxzz" src="img/bg.mp3" autoplay loop style="display: none;position: absolute"></audio>
+<audio id="zxzz" src="img/bg.mp3" loop style="display: none;position: absolute"></audio>
 <div id="bg"></div>
 <!-- Add your site or application content here -->
 <div id="one" data-role="page" data-dom-cache="true" style="display: none;">
     <div class="top-section-10">
         <img src="img/cover01.png" style="width: 96px;">
-        <img src="img/title.svg" style="width: 202px;" class="animated infinite tada">
+        <img src="img/title.svg" style="width: 202px;" class="">
         <div class="padding-20"></div>
         <img src="img/cover02.png" style="width: 192px;">
         <div class="padding-20"></div>
-        <div class="loading animated infinite pulse">loading...</div>
+        <div class="loading animated infinite pulse" id="loading-button">loading...</div>
+        <img src="img/begin-button.svg" class="animated infinite bounce" id="begin-button" style="width: 70px;display: none;">
     </div>
     <div class="bottom-section-5">
         <img src="img/logo.svg" style="width: 120px;">
@@ -1047,7 +1048,9 @@
 
         window.setTimeout(function(){
 //            $(document).transition('to', 'two');
-        },2000);
+            $('#loading-button').hide();
+            $('#begin-button').show();
+        },1500);
 
         $(document).on('pageshow', animation);
         $(document).on('pagehide', whenPageHide);
