@@ -20,16 +20,16 @@
 <!-- Add your site or application content here -->
 <div id="one" data-role="page" data-dom-cache="true" style="display: none;">
     <div class="top-section-10">
-        <img src="img/cover01.png" style="width: 96px;">
-        <img src="img/title.svg" style="width: 202px;" class="">
+        <img src="img/cover01.svg" style="width: 30%;height: 10%;">
+        <img src="img/title.svg" style="width: 65%;height:20%;" class="">
         <div class="padding-20"></div>
-        <img src="img/cover02.png" style="width: 192px;">
+        <img src="img/cover02.svg" style="width: 60%;height: 10%;">
         <div class="padding-20"></div>
         <div class="loading animated infinite pulse" id="loading-button">loading...</div>
-        <img src="img/begin-button.svg" class="animated infinite bounce" id="begin-button" style="width: 70px;display: none;">
+        <img src="img/begin-button.svg" class="animated infinite bounce" id="begin-button" style="width: 22%;height: 10%;display: none;">
     </div>
     <div class="bottom-section-5">
-        <img src="img/logo.svg" style="width: 120px;">
+        <img src="img/logo.svg" style="width: 38%;height:100%;">
     </div>
 </div>
 <div id="two" data-role="page" data-dom-cache="true" style="display: none;">
@@ -803,40 +803,40 @@
     <img src="img/coin-fall-still.svg" id="coin-fall-still" class="coin-fall">
 </div>
 <div class="top-section-0" id="coin-fall">
-    <img src="img/coin-fall.svg" id="coin-fall-1" style="width: 55px;" class="delay-1 coin-fall-animation">
+    <img src="img/coin-fall.svg" id="coin-fall-1" style="width: 55px; left: 10%;" class="delay-1 coin-fall-animation">
     <img src="img/coin-fall.svg" id="coin-fall-2" style="width: 55px; left: 20%;" class="delay-3 coin-fall-animation">
     <img src="img/coin-fall.svg" id="coin-fall-3" style="width: 55px; left: 40%;" class="coin-fall-animation">
     <img src="img/coin-fall.svg" id="coin-fall-4" style="width: 55px; left: 50%;" class="delay-4 coin-fall-animation">
     <img src="img/coin-fall.svg" id="coin-fall-5" style="width: 55px; left: 70%;" class="delay-2 coin-fall-animation">
 </div>
 <div class="bottom-section-5">
-    <img src="img/title.svg" style="width: 202px;" class="animated infinite tada" id="page-two-title">
+    <img src="img/title.svg" style="width: 60%;height: 100%;" class="animated infinite tada" id="page-two-title">
 </div>
 
 </div>
 <div id="three" data-role="page" style="display: none;">
     <div class="top-section-0" id="result-before">
         <div class="padding-50"></div>
-        <img src="img/c-before.svg" style="width: 268px;">
+        <img src="img/c-before.svg" style="width: 80%;height: 40%;">
     </div>
     <div class="top-section-0 result" id="result-1" style="display: none;">
-        <img src="img/c-1.svg" style="width: 258px;">
+        <img src="img/c-1.svg" style="width: 90%; height: 96%;">
     </div>
     <div class="top-section-0 result" id="result-2" style="display: none;">
-        <img src="img/c-2.svg" style="width: 258px;">
+        <img src="img/c-2.svg" style="width: 90%; height: 96%;">
     </div>
     <div class="top-section-0 result" id="result-3" style="display: none;">
-        <img src="img/c-3.svg" style="width: 258px;">
+        <img src="img/c-3.svg" style="width: 90%; height: 96%;">
     </div>
+    <img src="img/logo.svg" style="display:none; top: 20px;position: absolute;right: 10px;width: 120px;" id="result-logo">
     <div class="bottom-section-20px">
-        <img src="img/logo.svg" style="width: 120px;">
         <img src="img/arrow-down.svg" style="width: 15px;padding-top:30px;" class="animated infinite bounce">
     </div>
 </div>
 <div id="four" data-role="page" style="display: none;">
     <div class="top-section-0">
-        <img src="img/d-1.svg" style="width: 100%;" class="animated infinite bounceIn">
-        <img src="img/d-2.svg" style="width: 100%;">
+        <img src="img/d-1.svg" style="width: 100%;height:10%" class="animated infinite bounceIn">
+        <img src="img/d-2.svg" style="width: 100%;height:90%">
     </div>
     <div class="bottom-section-5">
         <img src="img/logo.svg" style="width: 120px;">
@@ -877,6 +877,7 @@
         }
         function initPageThree(){
             $('.result').hide();
+            $('#result-logo').hide();
             $('#result-before').show();
         }
 
@@ -996,6 +997,7 @@
                 var list=['result-1', 'result-2', 'result-3'];
                 var result = "#" + list[Math.floor((Math.random() * 2) + 0)];
                 $(result).show();
+                $('#result-logo').show();
             },1500);
         }
 
@@ -1027,10 +1029,10 @@
             e.preventDefault();
         });
 
-//        $('#two').on('click', function(e) {
-//            e.preventDefault();
-//            testShake();
-//        });
+        $('#two').on('click', function(e) {
+            e.preventDefault();
+            testShake();
+        });
         $('#three').on('click', function(e) {
             $(document).transition('to', 'four', 'slideup');
             e.preventDefault();
