@@ -1012,7 +1012,7 @@
             }
             else if(shake === 1){
                 bigCoinShow();
-                document.getElementById('zxzz').play();
+
             }
 
         }
@@ -1021,6 +1021,7 @@
 //        $(document).on('pageinit', function() {
         $('#one').on('click', function(e) {
             console.log(e);
+            document.getElementById('zxzz').play();
             $(document).transition('to', 'two');
             e.preventDefault();
         });
@@ -1045,7 +1046,7 @@
 //        });
 
         window.setTimeout(function(){
-            $(document).transition('to', 'two');
+//            $(document).transition('to', 'two');
         },2000);
 
         $(document).on('pageshow', animation);
