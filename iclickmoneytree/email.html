@@ -17,19 +17,19 @@
 <body style="-webkit-app-region: drag">
 <audio id="zxzz" src="img/bg.mp3" autoplay loop style="display: none;position: absolute"></audio>
 <div id="bg"></div>
-<div id="main-container" style="position: relative; margin:0 auto; width: 600px; height: 100%;">
 <!-- Add your site or application content here -->
 <div id="one" data-role="page" data-dom-cache="true" style="display: none;">
     <div class="top-section-10">
-        <img src="img/cover01.png" style="width: 192px;">
-        <img src="img/title-e.svg" style="width: 404px;" class="animated infinite tada">
+        <img src="img/cover01.svg" style="width: 30%;height: 10%;">
+        <img src="img/title-e.svg" style="width: 65%;height:20%;" class="">
         <div class="padding-20"></div>
-        <img src="img/cover02.png" style="width: 384px;">
+        <img src="img/cover02.svg" style="width: 60%;height: 10%;">
         <div class="padding-20"></div>
-        <div class="loading animated infinite pulse">loading...</div>
+        <div class="loading animated infinite pulse" id="loading-button">loading...</div>
+        <img src="img/begin-button.svg" class="animated infinite bounce" id="begin-button" style="width: 22%;height: 10%;display: none;">
     </div>
     <div class="bottom-section-5">
-        <img src="img/logo.svg" style="width: 240px;">
+        <img src="img/logo.svg" style="width: 38%;height:100%;">
     </div>
 </div>
 <div id="two" data-role="page" data-dom-cache="true" style="display: none;">
@@ -800,39 +800,37 @@
 </div>
 
 <div class="top-section-0">
-    <img src="img/coin-fall-still.svg" id="coin-fall-still" class="coin-fall" style="width: 90%;left: 15%;">
+    <img src="img/coin-fall-still.svg" id="coin-fall-still" class="coin-fall">
 </div>
 <div class="top-section-0" id="coin-fall">
-    <img src="img/coin-fall.svg" id="coin-fall-1" style="width: 75px;" class="delay-1 coin-fall-animation">
-    <img src="img/coin-fall.svg" id="coin-fall-2" style="width: 75px; left: 20%;" class="delay-3 coin-fall-animation">
-    <img src="img/coin-fall.svg" id="coin-fall-3" style="width: 75px; left: 40%;" class="coin-fall-animation">
-    <img src="img/coin-fall.svg" id="coin-fall-4" style="width: 75px; left: 50%;" class="delay-4 coin-fall-animation">
-    <img src="img/coin-fall.svg" id="coin-fall-5" style="width: 75px; left: 70%;" class="delay-2 coin-fall-animation">
+    <img src="img/coin-fall.svg" id="coin-fall-1" style="width: 55px; left: 10%;" class="delay-1 coin-fall-animation">
+    <img src="img/coin-fall.svg" id="coin-fall-2" style="width: 55px; left: 20%;" class="delay-3 coin-fall-animation">
+    <img src="img/coin-fall.svg" id="coin-fall-3" style="width: 55px; left: 40%;" class="coin-fall-animation">
+    <img src="img/coin-fall.svg" id="coin-fall-4" style="width: 55px; left: 50%;" class="delay-4 coin-fall-animation">
+    <img src="img/coin-fall.svg" id="coin-fall-5" style="width: 55px; left: 70%;" class="delay-2 coin-fall-animation">
 </div>
 <div class="bottom-section-5">
-    <img src="img/title-e.svg" style="width: 303px;" class="animated infinite tada" id="page-two-title">
+    <img src="img/title-e.svg" style="width: 60%;height: 100%;" class="animated infinite tada" id="page-two-title">
 </div>
 
 </div>
 <div id="three" data-role="page" style="display: none;">
     <div class="top-section-0" id="result-before">
         <div class="padding-50"></div>
-        <img src="img/c-before.svg" style="width: 536px;">
+        <img src="img/c-before.svg" style="width: 80%;height: 40%;">
     </div>
     <div class="top-section-0 result" id="result-1" style="display: none;">
-        <img src="img/c-1.svg">
+        <img src="img/c-1.svg" style="width: 90%; height: 96%;">
     </div>
     <div class="top-section-0 result" id="result-2" style="display: none;">
-        <img src="img/c-2.svg">
+        <img src="img/c-2.svg" style="width: 90%; height: 96%;">
     </div>
     <div class="top-section-0 result" id="result-3" style="display: none;">
-        <img src="img/c-3.svg">
+        <img src="img/c-3.svg" style="width: 90%; height: 96%;">
     </div>
-    <div class="bottom-section-20px">
-        <img src="img/logo.svg" style="width: 240px;">
-    </div>
+    <img src="img/logo.svg" style="display:none; top: 20px;position: absolute;right: 10px;width: 120px;" id="result-logo">
 </div>
-</div>
+
 <script type="text/javascript" src="lib/zepto.min.js"></script>
 <script type="text/javascript" src="lib/touch.js"></script>
 
@@ -867,6 +865,7 @@ $(document).ready(function() {
     }
     function initPageThree(){
         $('.result').hide();
+        $('#result-logo').hide();
         $('#result-before').show();
     }
 
@@ -986,6 +985,7 @@ $(document).ready(function() {
             var list=['result-1', 'result-2', 'result-3'];
             var result = "#" + list[Math.floor((Math.random() * 2) + 0)];
             $(result).show();
+            $('#result-logo').show();
         },1500);
     }
 
@@ -1003,6 +1003,7 @@ $(document).ready(function() {
         }
         else if(shake === 1){
             bigCoinShow();
+
         }
 
     }
@@ -1011,28 +1012,38 @@ $(document).ready(function() {
 //        $(document).on('pageinit', function() {
     $('#one').on('click', function(e) {
         console.log(e);
-        $(document).transition('to', 'two');
-        e.preventDefault();
+        window.open('#two','targetWindow',' screenX=300;titlebar=no,directories=no,toolbar=no,location=no,status=no,menubar=no,scrollbars=no,resizable=no,width=500 height=800');
+
     });
 
     $('#two').on('click', function(e) {
         e.preventDefault();
         testShake();
     });
+//        $('#four').on('click', function(e) {
+//            $(document).transition('to', 'one');
+//            e.preventDefault();
+//        });
+
     window.setTimeout(function(){
-//        $(document).transition('to', 'two');
-    },2000);
+//            $(document).transition('to', 'two');
+        $('#loading-button').hide();
+        $('#begin-button').show();
+    },1500);
 
     $(document).on('pageshow', animation);
     $(document).on('pagehide', whenPageHide);
     $(document).on('pagebeforeshow', pageBeforeShow);
 
+    if(window.location.hash=="#two"){
+        treeShow();
+    }
 
-    $('#main-container').width($('#main-container').height() * .75);
+    var onresize = function() {
+        window.resizeTo(500,800);
+    }
+    window.addEventListener("resize", onresize);
 });
-
-
-
 //    });
 </script>
 <script type="text/javascript" src="lib/shake.js"></script>
