@@ -470,6 +470,9 @@ img{
 .padding-20{
     height: 20px;
 }
+.padding-10{
+    height: 20px;
+}
 .padding-50{
     height: 50px;
 }
@@ -524,12 +527,16 @@ img{
 }
 .coin-fall-animation{
     position: absolute;
-    bottom: 0;
+    bottom: 5%;
     left: 10px;
     height: 60%;
     width: 55px;
     -webkit-animation-fill-mode: forwards !important;
     animation-fill-mode: forwards !important;
+}
+.delay-1s{
+    -webkit-animation-delay: 1s !important;
+    animation-delay: 1s !important;
 }
 .delay-1{
     -webkit-animation-delay: .3s !important;

@@ -1,3 +1,9 @@
+<?php
+require_once "jssdk.php";
+$jssdk = new JSSDK("wx5ee7eb4c8db61ac7", "62a35a63c75a99f9bc620e57ab0ca0ed");
+$signPackage = $jssdk->GetSignPackage();
+?>
+
 <!doctype html>
 <html class="no-js" lang="">
 <head>
@@ -9,26 +15,37 @@
     <meta name='viewport' content='width=device-width, initial-scale=1.0; maximum-scale=1.0; user-scalable=0;' />
     <meta http-equiv="cleartype" content="on">
 
-    <link rel="stylesheet" href="lib/transition.css">
-    <link rel="stylesheet" href="lib/animate.min.css">
-    <link rel="stylesheet" href="app.css">
+    <link rel="stylesheet" href="http://7vil1j.com1.z0.glb.clouddn.com/lib/transition.css">
+    <link rel="stylesheet" href="http://7vil1j.com1.z0.glb.clouddn.com/lib/animate.min.css">
+    <link rel="stylesheet" href="http://7vil1j.com1.z0.glb.clouddn.com/app.css">
+    <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+    
+    <script>
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?6fd2b54ea5091a7022104ba1f977247c";
+      var s = document.getElementsByTagName("script")[0]; 
+      s.parentNode.insertBefore(hm, s);
+    })();
+    </script>
 </head>
 
 <body style="-webkit-app-region: drag">
-<audio id="zxzz" src="img/bg.mp3" autoplay loop style="display: none;position: absolute"></audio>
+<audio id="zxzz" src="http://7vil1j.com1.z0.glb.clouddn.com/img/bg.mp3" autoplay loop style="display: none;position: absolute"></audio>
 <div id="bg"></div>
 <!-- Add your site or application content here -->
 <div id="one" data-role="page" data-dom-cache="true" style="display: none;">
     <div class="top-section-10">
-        <img src="img/cover01.svg" style="width: 46%;height: 14%;">
-        <img src="img/title.svg" style="width: 56%;height:20%;" class="">
-        <img src="img/cover02.svg" style="width: 67%;height: 7%;">
+        <img src="http://7vil1j.com1.z0.glb.clouddn.com/img/cover01.svg" style="width: 46%;height: 14%;">
+        <img src="http://7vil1j.com1.z0.glb.clouddn.com/img/title.svg" style="width: 56%;height:20%;" class="">
+        <img src="http://7vil1j.com1.z0.glb.clouddn.com/img/cover02.svg" style="width: 67%;height: 7%;">
         <div class="padding-20"></div>
         <div class="loading animated infinite pulse" id="loading-button">loading...</div>
-        <img src="img/begin-button.svg" class="animated infinite bounce" id="begin-button" style="width: 22%;height: 10%;display: none;">
+        <img src="http://7vil1j.com1.z0.glb.clouddn.com/img/begin-button.svg" class="animated infinite bounce" id="begin-button" style="width: 22%;height: 10%;display: none;">
     </div>
     <div class="bottom-section-5">
-        <img src="img/logo.svg" style="width: 38%;height:100%;">
+        <img src="http://7vil1j.com1.z0.glb.clouddn.com/img/logo.svg" style="width: 38%;height:100%;">
     </div>
 </div>
 <div id="two" data-role="page" data-dom-cache="true" style="display: none;">
@@ -604,47 +621,43 @@
 </div>
 
 <div class="top-section-0" id="coin-fall">
-    <img src="img/coin-fall-front.svg" id="coin-fall-1" style="width: 10%;height:auto; left: 10%;" class="coin-fall-animation">
-    <img src="img/coin-fall-text.svg" id="coin-fall-text" class="delay-1s" style="width: 60%;left: 30%; bottom: 3%;position: absolute;">
+    <img src="http://7vil1j.com1.z0.glb.clouddn.com/img/coin-fall.svg" id="coin-fall-1" style="width: 10%;height:auto; left: 10%;" class="coin-fall-animation">
+    <img src="http://7vil1j.com1.z0.glb.clouddn.com/img/coin-fall-text.svg" id="coin-fall-text" class="delay-1s" style="width: 60%;left: 30%; bottom: 3%;position: absolute;">
 </div>
 <div class="bottom-section-5">
-    <img src="img/title-b.svg" style="width: 60%;height: 100%;" class="animated infinite tada" id="page-two-title">
+    <img src="http://7vil1j.com1.z0.glb.clouddn.com/img/title.svg" style="width: 60%;height: 100%;" class="animated infinite tada" id="page-two-title">
 </div>
 
 </div>
 <div id="three" data-role="page" style="display: none;">
     <div class="top-section-0" id="result-before">
         <div class="padding-50"></div>
-        <img src="img/c-before.svg" style="width: 80%;height: 40%;">
+        <img src="http://7vil1j.com1.z0.glb.clouddn.com/img/c-before.svg" style="width: 80%;height: 40%;">
     </div>
     <div class="top-section-0 result" id="result-1" style="display: none;">
-        <img src="img/c-1.svg" style="width: 90%; height: 96%;">
+        <img src="http://7vil1j.com1.z0.glb.clouddn.com/img/c-1.svg" style="width: 90%; height: 96%;">
     </div>
     <div class="top-section-0 result" id="result-2" style="display: none;">
-        <img src="img/c-2.svg" style="width: 90%; height: 96%;">
+        <img src="http://7vil1j.com1.z0.glb.clouddn.com/img/c-2.svg" style="width: 90%; height: 96%;">
     </div>
     <div class="top-section-0 result" id="result-3" style="display: none;">
-        <img src="img/c-3.svg" style="width: 90%; height: 96%;">
+        <img src="http://7vil1j.com1.z0.glb.clouddn.com/img/c-3.svg" style="width: 90%; height: 96%;">
     </div>
-    <img src="img/logo.svg" style="display:none; top: 20px;position: absolute;right: 10px;width: 120px;" id="result-logo">
+    <img src="http://7vil1j.com1.z0.glb.clouddn.com/img/logo.svg" style="display:none; top: 20px;position: absolute;right: 10px;width: 120px;" id="result-logo">
     <div class="bottom-section-20px">
-        <img src="img/arrow-down.svg" style="width: 15px;padding-top:30px;" class="animated infinite bounce">
+        <img src="http://7vil1j.com1.z0.glb.clouddn.com/img/arrow-down.svg" style="width: 15px;padding-top:30px;" class="animated infinite bounce">
     </div>
 </div>
 <div id="four" data-role="page" style="display: none;">
     <div class="top-section-0">
-        <img src="img/d-1.svg" style="width: 100%;height:10%" class="animated infinite bounceIn">
-        <img src="img/d-2.svg" style="width: 100%;height:90%">
-    </div>
-    <div class="bottom-section-5">
-        <img src="img/logo.svg" style="width: 120px;">
+        <img src="http://7vil1j.com1.z0.glb.clouddn.com/img/d-1.svg" style="width: 100%;height:10%" class="animated infinite bounceIn">
+        <img src="http://7vil1j.com1.z0.glb.clouddn.com/img/d-2.svg" style="width: 100%;height:85%">
     </div>
 </div>
 
-<script type="text/javascript" src="lib/zepto.min.js"></script>
-<script type="text/javascript" src="lib/touch.js"></script>
+<script type="text/javascript" src="http://7vil1j.com1.z0.glb.clouddn.com/lib/zepto.min.js"></script>
+<script type="text/javascript" src="http://7vil1j.com1.z0.glb.clouddn.com/lib/touch.js"></script>
 
-<script src="app.js"></script>
 <script type="text/javascript">
     document.ontouchmove = function(e) {e.preventDefault()};
     $(document).ready(function() {
@@ -783,7 +796,6 @@
 
             $('.coin-fall-animation').addClass(x + ' animated').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
                 $(this).removeClass(x + ' animated');
-
             });
 
 
@@ -812,6 +824,9 @@
                 $('#coin-fall').show();
                 testAnim('fadeInDownBig');
                 $("#coin-fall-text").addClass("animated lightSpeedIn");
+                window.setTimeout(function(){
+                  $(document).transition('to', 'three');
+                },3000);
             }
             else if(shake === 1){
                 bigCoinShow();
@@ -823,20 +838,20 @@
 
 //        $(document).on('pageinit', function() {
         $('#one').on('click', function(e) {
-            console.log(e);
+            // console.log(e);
             document.getElementById('zxzz').play();
             $(document).transition('to', 'two');
             e.preventDefault();
         });
 
-        $('#two').on('click', function(e) {
-            e.preventDefault();
-            testShake();
-        });
-        $('#three').on('click', function(e) {
-            $(document).transition('to', 'four', 'slideup');
-            e.preventDefault();
-        });
+        // $('#two').on('click', function(e) {
+        //     e.preventDefault();
+        //     testShake();
+        // });
+        // $('#three').on('click', function(e) {
+        //     $(document).transition('to', 'four', 'slideup');
+        //     e.preventDefault();
+        // });
         $('#three').swipeUp(function(){
             $(document).transition('to', 'four', 'slideup');
         });
@@ -861,6 +876,50 @@
     });
     //    });
 </script>
-<script type="text/javascript" src="lib/shake.js"></script>
-<script type="text/javascript" src="lib/transition.min.js"></script>
+<script type="text/javascript" src="http://7vil1j.com1.z0.glb.clouddn.com/lib/shake.js"></script>
+<script type="text/javascript" src="http://7vil1j.com1.z0.glb.clouddn.com/lib/transition.min.js"></script>
+<script>
+        wx.config({
+          appId: '<?php echo $signPackage["appId"];?>',
+          timestamp: <?php echo $signPackage["timestamp"];?>,
+          nonceStr: '<?php echo $signPackage["nonceStr"];?>',
+          signature: '<?php echo $signPackage["signature"];?>',
+            jsApiList: [
+                'onMenuShareTimeline',
+                'onMenuShareAppMessage'
+
+                // 所有要调用的 API 都要加到这个列表中
+            ]
+        });
+
+        wx.ready(function () {
+            // 在这里调用 API
+            wx.onMenuShareTimeline({
+                title: '爱点击羊年新春摇一摇，数字“赢”销财运到', // 分享标题
+                link: 'http://weixinapp.weburner.com/iclickmoneytree/', // 分享链接
+                imgUrl: 'http://7vil1j.com1.z0.glb.clouddn.com/img/icon.jpg', // 分享图标
+                success: function () {
+                    // 用户确认分享后执行的回调函数
+                },
+                cancel: function () {
+                    // 用户取消分享后执行的回调函数
+                }
+            });
+
+            wx.onMenuShareAppMessage({
+                title: '爱点击羊年新春摇一摇，数字“赢”销财运到', // 分享标题
+                desc: '爱点击恭祝您和您的家人 2015新春快乐，羊年大吉！羊年新春摇一摇，数字“赢”销财运到', // 分享描述
+                link: 'http://weixinapp.weburner.com/iclickmoneytree/', // 分享链接
+                imgUrl: 'http://7vil1j.com1.z0.glb.clouddn.com/img/icon.jpg', // 分享图标
+                success: function () {
+                    // 用户确认分享后执行的回调函数
+                },
+                cancel: function () {
+                    // 用户取消分享后执行的回调函数
+                }
+            });
+
+
+        });
+</script>
 </body>
