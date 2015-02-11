@@ -15,9 +15,9 @@ $signPackage = $jssdk->GetSignPackage();
     <meta name='viewport' content='width=device-width, initial-scale=1.0; maximum-scale=1.0; user-scalable=0;' />
     <meta http-equiv="cleartype" content="on">
 
-    <link rel="stylesheet" href="http://7vil1j.com1.z0.glb.clouddn.com/lib/transition.css">
-    <link rel="stylesheet" href="http://7vil1j.com1.z0.glb.clouddn.com/lib/animate.min.css">
-    <link rel="stylesheet" href="http://7vil1j.com1.z0.glb.clouddn.com/app.css">
+    <link rel="stylesheet" href="http://7vilyf.com1.z0.glb.clouddn.com/lib/transition.css">
+    <link rel="stylesheet" href="http://7vilyf.com1.z0.glb.clouddn.com/lib/animate.min.css">
+    <link rel="stylesheet" href="http://7vilyf.com1.z0.glb.clouddn.com/app.css">
     <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
     
     <script>
@@ -32,20 +32,20 @@ $signPackage = $jssdk->GetSignPackage();
 </head>
 
 <body style="-webkit-app-region: drag">
-<audio id="zxzz" src="http://7vil1j.com1.z0.glb.clouddn.com/img/bg.mp3" autoplay loop style="display: none;position: absolute"></audio>
+<audio id="zxzz" src="http://7vilyf.com1.z0.glb.clouddn.com/img/bg.mp3" autoplay loop style="display: none;position: absolute"></audio>
 <div id="bg"></div>
 <!-- Add your site or application content here -->
 <div id="one" data-role="page" data-dom-cache="true" style="display: none;">
     <div class="top-section-10">
-        <img src="http://7vil1j.com1.z0.glb.clouddn.com/img/cover01.svg" style="width: 46%;height: 14%;">
-        <img src="http://7vil1j.com1.z0.glb.clouddn.com/img/title.svg" style="width: 56%;height:20%;" class="">
-        <img src="http://7vil1j.com1.z0.glb.clouddn.com/img/cover02.svg" style="width: 67%;height: 7%;">
+        <img src="http://7vilyf.com1.z0.glb.clouddn.com/img/cover01.svg" style="width: 46%;height: 14%;">
+        <img src="http://7vilyf.com1.z0.glb.clouddn.com/img/title.svg" style="width: 56%;height:20%;" class="">
+        <img src="http://7vilyf.com1.z0.glb.clouddn.com/img/cover02.svg" style="width: 67%;height: 7%;">
         <div class="padding-20"></div>
         <div class="loading animated infinite pulse" id="loading-button">loading...</div>
-        <img src="http://7vil1j.com1.z0.glb.clouddn.com/img/begin-button.svg" class="animated infinite bounce" id="begin-button" style="width: 22%;height: 10%;display: none;">
+        <img src="http://7vilyf.com1.z0.glb.clouddn.com/img/begin-button.svg" class="animated infinite bounce" id="begin-button" style="width: 22%;height: 10%;display: none;">
     </div>
     <div class="bottom-section-5">
-        <img src="http://7vil1j.com1.z0.glb.clouddn.com/img/logo.svg" style="width: 38%;height:100%;">
+        <img src="http://7vilyf.com1.z0.glb.clouddn.com/img/logo.svg" style="width: 38%;height:100%;">
     </div>
 </div>
 <div id="two" data-role="page" data-dom-cache="true" style="display: none;">
@@ -621,42 +621,42 @@ $signPackage = $jssdk->GetSignPackage();
 </div>
 
 <div class="top-section-0" id="coin-fall">
-    <img src="http://7vil1j.com1.z0.glb.clouddn.com/img/coin-fall.svg" id="coin-fall-1" style="width: 10%;height:auto; left: 10%;" class="coin-fall-animation">
-    <img src="http://7vil1j.com1.z0.glb.clouddn.com/img/coin-fall-text.svg" id="coin-fall-text" class="delay-1s" style="width: 60%;left: 30%; bottom: 3%;position: absolute;">
+    <img src="http://7vilyf.com1.z0.glb.clouddn.com/img/coin-fall.svg" id="coin-fall-1" style="width: 10%;height:auto; left: 10%;" class="coin-fall-animation">
+    <img src="http://7vilyf.com1.z0.glb.clouddn.com/img/coin-fall-text.svg" id="coin-fall-text" class="delay-1s" style="width: 60%;left: 30%; bottom: 3%;position: absolute;">
 </div>
 <div class="bottom-section-5">
-    <img src="http://7vil1j.com1.z0.glb.clouddn.com/img/title.svg" style="width: 60%;height: 100%;" class="animated infinite tada" id="page-two-title">
+    <img src="http://7vilyf.com1.z0.glb.clouddn.com/img/title.svg" style="width: 60%;height: 100%;" class="animated infinite tada" id="page-two-title">
 </div>
 
 </div>
 <div id="three" data-role="page" style="display: none;">
     <div class="top-section-0" id="result-before">
         <div class="padding-50"></div>
-        <img src="http://7vil1j.com1.z0.glb.clouddn.com/img/c-before.svg" style="width: 80%;height: 40%;">
+        <img src="http://7vilyf.com1.z0.glb.clouddn.com/img/c-before.svg" style="width: 80%;height: 40%;">
     </div>
     <div class="top-section-0 result" id="result-1" style="display: none;">
-        <img src="http://7vil1j.com1.z0.glb.clouddn.com/img/c-1.svg" style="width: 90%; height: 96%;">
+        <img src="http://7vilyf.com1.z0.glb.clouddn.com/img/c-1.svg" style="width: 90%; height: 96%;">
     </div>
     <div class="top-section-0 result" id="result-2" style="display: none;">
-        <img src="http://7vil1j.com1.z0.glb.clouddn.com/img/c-2.svg" style="width: 90%; height: 96%;">
+        <img src="http://7vilyf.com1.z0.glb.clouddn.com/img/c-2.svg" style="width: 90%; height: 96%;">
     </div>
     <div class="top-section-0 result" id="result-3" style="display: none;">
-        <img src="http://7vil1j.com1.z0.glb.clouddn.com/img/c-3.svg" style="width: 90%; height: 96%;">
+        <img src="http://7vilyf.com1.z0.glb.clouddn.com/img/c-3.svg" style="width: 90%; height: 96%;">
     </div>
-    <img src="http://7vil1j.com1.z0.glb.clouddn.com/img/logo.svg" style="display:none; top: 20px;position: absolute;right: 10px;width: 120px;" id="result-logo">
+    <img src="http://7vilyf.com1.z0.glb.clouddn.com/img/logo.svg" style="display:none; top: 20px;position: absolute;right: 10px;width: 120px;" id="result-logo">
     <div class="bottom-section-20px">
-        <img src="http://7vil1j.com1.z0.glb.clouddn.com/img/arrow-down.svg" style="width: 15px;padding-top:30px;" class="animated infinite bounce">
+        <img src="http://7vilyf.com1.z0.glb.clouddn.com/img/arrow-down.svg" style="width: 15px;padding-top:30px;" class="animated infinite bounce">
     </div>
 </div>
 <div id="four" data-role="page" style="display: none;">
     <div class="top-section-0">
-        <img src="http://7vil1j.com1.z0.glb.clouddn.com/img/d-1.svg" style="width: 100%;height:10%" class="animated infinite bounceIn">
-        <img src="http://7vil1j.com1.z0.glb.clouddn.com/img/d-2.svg" style="width: 100%;height:85%">
+        <img src="http://7vilyf.com1.z0.glb.clouddn.com/img/d-1.svg" style="width: 100%;height:10%" class="animated infinite bounceIn">
+        <img src="http://7vilyf.com1.z0.glb.clouddn.com/img/d-2.svg" style="width: 100%;height:85%">
     </div>
 </div>
 
-<script type="text/javascript" src="http://7vil1j.com1.z0.glb.clouddn.com/lib/zepto.min.js"></script>
-<script type="text/javascript" src="http://7vil1j.com1.z0.glb.clouddn.com/lib/touch.js"></script>
+<script type="text/javascript" src="http://7vilyf.com1.z0.glb.clouddn.com/lib/zepto.min.js"></script>
+<script type="text/javascript" src="http://7vilyf.com1.z0.glb.clouddn.com/lib/touch.js"></script>
 
 <script type="text/javascript">
     document.ontouchmove = function(e) {e.preventDefault()};
@@ -876,8 +876,8 @@ $signPackage = $jssdk->GetSignPackage();
     });
     //    });
 </script>
-<script type="text/javascript" src="http://7vil1j.com1.z0.glb.clouddn.com/lib/shake.js"></script>
-<script type="text/javascript" src="http://7vil1j.com1.z0.glb.clouddn.com/lib/transition.min.js"></script>
+<script type="text/javascript" src="http://7vilyf.com1.z0.glb.clouddn.com/lib/shake.js"></script>
+<script type="text/javascript" src="http://7vilyf.com1.z0.glb.clouddn.com/lib/transition.min.js"></script>
 <script>
         wx.config({
           appId: '<?php echo $signPackage["appId"];?>',
@@ -897,7 +897,7 @@ $signPackage = $jssdk->GetSignPackage();
             wx.onMenuShareTimeline({
                 title: '爱点击羊年新春摇一摇，数字“赢”销财运到', // 分享标题
                 link: 'http://weixinapp.weburner.com/iclickmoneytree/', // 分享链接
-                imgUrl: 'http://7vil1j.com1.z0.glb.clouddn.com/img/icon.jpg', // 分享图标
+                imgUrl: 'http://7vilyf.com1.z0.glb.clouddn.com/img/icon.jpg', // 分享图标
                 success: function () {
                     // 用户确认分享后执行的回调函数
                 },
@@ -908,9 +908,9 @@ $signPackage = $jssdk->GetSignPackage();
 
             wx.onMenuShareAppMessage({
                 title: '爱点击羊年新春摇一摇，数字“赢”销财运到', // 分享标题
-                desc: '爱点击恭祝您和您的家人 2015新春快乐，羊年大吉！羊年新春摇一摇，数字“赢”销财运到', // 分享描述
+                desc: '摇钱树，摇一摇，数字“赢”销财运到！爱点击恭祝您和您的家人2015新春快乐，羊年大吉！', // 分享描述
                 link: 'http://weixinapp.weburner.com/iclickmoneytree/', // 分享链接
-                imgUrl: 'http://7vil1j.com1.z0.glb.clouddn.com/img/icon.jpg', // 分享图标
+                imgUrl: 'http://7vilyf.com1.z0.glb.clouddn.com/img/icon.jpg', // 分享图标
                 success: function () {
                     // 用户确认分享后执行的回调函数
                 },
