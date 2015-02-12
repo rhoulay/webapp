@@ -801,6 +801,7 @@
         }
 
         function testShake(){
+            coinAudio.play();
             shake += 1;
             if(shake === 3){
                 $(document).transition('to', 'three');
@@ -857,6 +858,10 @@
         $(document).on('pageshow', animation);
         $(document).on('pagehide', whenPageHide);
         $(document).on('pagebeforeshow', pageBeforeShow);
+
+        var coinAudio = new Audio("img/coin.mp3");
+        coinAudio.play();
+        coinAudio.pause();
 
     });
     //    });
