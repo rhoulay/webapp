@@ -1,0 +1,104 @@
+<!doctype html>
+<html class="no-js" lang="">
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name='viewport' content='width=device-width, initial-scale=1.0; maximum-scale=1.0; user-scalable=0;' />
+    <meta http-equiv="cleartype" content="on">
+
+    <link rel="stylesheet" href="app.css">
+    <link rel="stylesheet" href="lib/animate.min.css">
+</head>
+
+<body>
+<audio id="bg-audio" src="img/bg.mp3" loop style="display: none;position: absolute"></audio>
+<div id="bg"></div>
+<div class="page">
+    <img src="img/loading.svg" id="loading" style="position:absolute;width: 64px;height: auto; top:44%; left: 50%;margin-left: -32px;">
+
+    <img src="img/mountain.png" id="mountain-pic" class="" style="display:none;position:absolute;width: auto;height: 45%; top:10px; right: 10px;">
+    <div id="mountain" style="display:none;"></div>
+    <div id="gote" style="display:none;"></div>
+    <img src="img/logo.svg" id="logo" style="display:none;position:absolute;width: 25%;height: auto; top:10px; left: 10px;">
+    <img src="img/title.svg" id="title" style="display:none; position:absolute;width: 14%;height: auto; top:10px; right: 10px;">
+    <img src="img/text-1.svg" id="text-1" style="display:none; position:absolute;width: 46%;height: auto; top:55%; right: 10%;">
+
+    <img src="img/text.svg" id="text" style="display:none; position:absolute;width: 48%;height: auto; top:80%; left: 50%; margin-left: -24%;">
+
+    <div id="scroll" style="display:none;">
+        <span class="left"></span>
+        <span class="middle">
+            <img src="img/text-2.svg" id="scroll-content" style="display:none;">
+        </span>
+        <span class="right"></span>
+    </div>
+
+    <script type="text/javascript" src="lib/zepto.min.js"></script>
+
+    <script>
+        document.ontouchmove = function(e) {e.preventDefault()};
+        $(document).ready(function() {
+            var scale = $(window).width()/320;
+            $('#gote').animate({ transform: 'scale('+scale+')' }, 0);
+
+
+
+
+            var overLoading = function(){
+                document.getElementById('bg-audio').play();
+                $('#loading').addClass('animated bounceOut').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+
+
+                    $('#mountain-pic').show();
+                    $('#mountain').show();
+                    $('#gote').show();
+
+                    window.setTimeout(function(){
+                        $('#scroll').show();
+                        $('#scroll').addClass('open');
+                        window.setTimeout(function(){
+                            $('#scroll-content').show();
+                            $('#scroll-content').addClass('animated bounce');
+                        },1000);
+
+
+                        window.setTimeout(function(){
+                            $('#logo').show();
+                            $('#logo').addClass('animated fadeIn');
+
+                            $('#title').show();
+                            $('#title').addClass('animated bounceInDown');
+
+                            $('#text-1').show();
+                            $('#text-1').addClass('animated bounceInRight');
+
+                            window.setTimeout(function(){
+                                $('#text').show();
+                                $('#text').addClass('animated tada infinite');
+                            },1500);
+
+                        },3000);
+
+                    },1500);
+
+
+
+
+                });
+            };
+
+
+
+            window.setTimeout(function(){
+                overLoading();
+            },1500);
+
+        });
+    </script>
+</div>
+
+</body>
+</html>
