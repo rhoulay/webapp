@@ -19,6 +19,7 @@ h1{
     left: 0;
     width: 100%;
     height: auto;
+    z-index: -1;
 }
 .section .bottom-image{
     top: auto;
@@ -69,6 +70,14 @@ body{
 .animated.half {
     -webkit-animation-duration: .3s;
     animation-duration: .3s;
+}
+.animated.long {
+    -webkit-animation-duration: 10s;
+    animation-duration: 10s;
+}
+.delay-1{
+    -webkit-animation-delay: 1.21s;
+    animation-delay: 1.21s;
 }
 .full-width{
     width: 100%;

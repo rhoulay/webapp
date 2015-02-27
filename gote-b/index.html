@@ -33,10 +33,17 @@
     <div class="section" id="section2">
         <img src="img/page-2-bg-t.png" class="top-image"/>
         <img src="img/page-2-bg-b.png" class="bottom-image"/>
+        <img src="img/page-2.svg" id="section2-title" class="title full-width" style="margin-top: -20%;"/>
+        <img src="img/leaf-1.png" id="section2-leaf-1" style="position: absolute;width: 36px;height: auto;top:30%;left: 15%;"/>
+        <img src="img/leaf-2.png" id="section2-leaf-2" style="position: absolute;width: 22px;height: auto;top:50%;right: 15%;"/>
 
     </div>
     <!--==================================================-->
-    <div class="section" id="section3"><h1>page 03</h1></div>
+    <div class="section" id="section3">
+        <img src="img/page-3-bg-t.png" class="top-image"/>
+        <img src="img/page-3-bg-b.png" class="bottom-image"/>
+        <img src="img/page-3-title.svg" id="section3-title" class="title full-width" style="margin-bottom: -50%;"/>
+    </div>
     <!--==================================================-->
     <div class="section" id="section4"><h1>page 04</h1></div>
     <!--==================================================-->
@@ -61,11 +68,24 @@
         }
 
         page_one_out();
+        page_two_out();
+        page_three_out();
 
         function page_one_out(){
             hideOpacity($("#section1-title"));
             hideOpacity($("#section1-subtitle"));
         }
+        function page_two_out(){
+            hideOpacity($("#section2-title"));
+            hideOpacity($("#section2-leaf-1"));
+            hideOpacity($("#section2-leaf-2"));
+            $("#section2-leaf-1").removeClass("animated rollIn rollOut long");
+            $("#section2-leaf-2").removeClass("animated rollIn rollOut long");
+        }
+        function page_three_out(){
+            hideOpacity($("#section3-title"));
+        }
+
 
         function page_one_in(){
             showOpacity($("#section1-title"));
@@ -73,11 +93,37 @@
                 $("#section1-title").removeClass("animated bounceInDown");
 
                 showOpacity($("#section1-subtitle"));
-                $("#section1-subtitle").addClass("animated bounceInDown").one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
-                    $("#section1-subtitle").removeClass("animated bounceInDown");
-                    console.log("hihi");
+                $("#section1-subtitle").addClass("animated tada").one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+                    $("#section1-subtitle").removeClass("animated tada");
+
 
                 });
+            });
+        }
+        function page_two_in(){
+            showOpacity($("#section2-title"));
+            $("#section2-title").addClass("animated zoomIn").one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+                $("#section2-title").removeClass("animated zoomIn");
+
+                showOpacity($("#section2-leaf-1"));
+                showOpacity($("#section2-leaf-2"));
+                $("#section2-leaf-1").addClass("animated rollIn long").one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+                    $("#section2-leaf-1").removeClass("animated rollIn long");
+                    $("#section2-leaf-1").addClass("animated rollOut long");
+                });
+                $("#section2-leaf-2").addClass("animated rollIn long delay-1").one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+                    $("#section2-leaf-2").removeClass("animated rollIn long");
+                    $("#section2-leaf-2").addClass("animated rollOut long");
+                });
+
+
+            });
+        }
+
+        function page_three_in(){
+            showOpacity($("#section3-title"));
+            $("#section3-title").addClass("animated zoomIn").one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+                $("#section3-title").removeClass("animated zoomIn");
             });
         }
 
@@ -93,6 +139,11 @@
 
                 if(index == 1){
                     page_one_out();
+                }else if(index == 2){
+                    page_two_out();
+                }
+                else if(index == 3){
+                    page_three_out();
                 }
             },
             afterLoad: function(anchorLink, index){
@@ -102,7 +153,10 @@
                     page_one_in();
                 }
                 else if(index == 2){
-
+                    page_two_in();
+                }
+                else if(index == 3){
+                    page_three_in();
                 }
             }
         });
