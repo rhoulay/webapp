@@ -575,10 +575,10 @@
     $(document).ready(function() {
         page_one_init();
         function page_one_init(){
-            $("#fu").css('opacity', '0');
-            $("#lu").css('opacity', '0');
-            $("#man").css('opacity', '0');
-            $("#tang").css('opacity', '0');
+//            $("#fu").css('opacity', '0');
+//            $("#lu").css('opacity', '0');
+//            $("#man").css('opacity', '0');
+//            $("#tang").css('opacity', '0');
         }
 
         function page_one_out(){
@@ -589,10 +589,10 @@
         }
 
         function page_one_in(){
-            $("#fu").attr("class", "st0 animated half fadeInDown").one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
-                $("#lu").attr("class", "st0 animated half fadeInDown").one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
-                    $("#man").attr("class", "st1 animated half fadeInDown").one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
-                        $("#tang").attr("class", "st0 animated half fadeInDown").one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+            $("#fu").attr("class", "st0 animated half zoomIn").one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+                $("#lu").attr("class", "st0 animated half zoomIn").one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+                    $("#man").attr("class", "st1 animated half zoomIn").one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+                        $("#tang").attr("class", "st0 animated half zoomIn").one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
                         });
                     });
                 });
