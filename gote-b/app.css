@@ -32,6 +32,7 @@ h1{
 body{
     background-size: cover;
     background-image: url(img/background-image.jpg);
+    background-color: #ece5d9;
 }
 
 /* Defining each section background and styles
