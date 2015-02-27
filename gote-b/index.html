@@ -23,6 +23,7 @@
 
 </head>
 <body>
+<img src="img/loading.svg" id="loading" style="position:absolute;width: 64px;height: auto; top:44%; left: 50%;margin-left: -32px;">
 <img src="img/logo.svg" id="logo"/>
 <img src="img/page-3-bg-b.png" id="wave" class="bottom-image"/>
 <img src="img/mountain.svg" id="mountain" class="bottom-image"/>
@@ -323,7 +324,7 @@
             resize : false,
             afterRender: function(){
                 var pluginContainer = $(this);
-                page_one_in();
+
             },
             onLeave: function(index, nextIndex, direction){
                 var leavingSection = $(this);
@@ -386,6 +387,29 @@
                 }
             }
         });
+
+        $.fn.fullpage.setAllowScrolling(false);
+        $('#logo').hide();
+
+        function overLoading(){
+            $('#loading').addClass("animated bounceOut").one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+                $("#loading").removeClass("animated bounceOut");
+                hideOpacity($("#loading"));
+                $('#logo').show();
+                page_one_in();
+                $.fn.fullpage.setAllowScrolling(true);
+            });
+        }
+        window.setTimeout(function(){
+            overLoading();
+//            $.fn.fullpage.setAllowScrolling(true);
+//            $(window).on('click', function(e) {
+//                document.getElementById('bg-audio').play();
+//                $('#open-button').hide();
+//                openCard();
+//            });
+
+        },2500);
     });
 </script>
 </body>
