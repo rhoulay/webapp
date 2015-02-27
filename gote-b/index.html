@@ -89,7 +89,7 @@
             obj.css('opacity', '1');
         }
 
-        page_one_out();
+        page_one_init();
         page_two_out();
         page_three_out();
         page_four_out();
@@ -100,9 +100,19 @@
         $("#wave").hide();
         $("#mountain").hide();
 
-        function page_one_out(){
+        function page_one_init(){
             hideOpacity($("#section1-title"));
             hideOpacity($("#section1-subtitle"));
+        }
+        function page_one_out(){
+            $("#section1-title").addClass("animated zoomOut no-so-long").one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+                $("#section1-title").removeClass("animated zoomOut no-so-long");
+                hideOpacity($("#section1-title"));
+            });
+            $("#section1-subtitle").addClass("animated zoomOut no-so-long").one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+                $("#section1-subtitle").removeClass("animated zoomOut no-so-long");
+                hideOpacity($("#section1-subtitle"));
+            });
         }
         function page_two_out(){
             hideOpacity($("#section2-title"));
@@ -115,30 +125,76 @@
             hideOpacity($("#section3-title"));
         }
         function page_four_out(){
-            hideOpacity($("#section4-image"));
-            hideOpacity($("#section4-title"));
+            $("#section4-image").addClass("animated zoomOut no-so-long").one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+                $("#section4-image").removeClass("animated zoomOut no-so-long");
+                hideOpacity($("#section4-image"));
+            });
+            $("#section4-title").addClass("animated zoomOut no-so-long").one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+                $("#section4-title").removeClass("animated zoomOut no-so-long");
+                hideOpacity($("#section4-title"));
+            });
         }
         function page_five_out(){
-            hideOpacity($("#section5-image"));
-            hideOpacity($("#section5-title"));
+            $("#section5-image").addClass("animated zoomOut no-so-long").one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+                $("#section5-image").removeClass("animated zoomOut no-so-long");
+                hideOpacity($("#section5-image"));
+            });
+            $("#section5-title").addClass("animated zoomOut no-so-long").one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+                $("#section5-title").removeClass("animated zoomOut no-so-long");
+                hideOpacity($("#section5-title"));
+            });
         }
         function page_six_out(){
-            hideOpacity($("#section6-image"));
-            hideOpacity($("#section6-logo"));
-            hideOpacity($("#section6-title"));
+            $("#section6-image").addClass("animated zoomOut no-so-long").one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+                $("#section6-image").removeClass("animated zoomOut no-so-long");
+                hideOpacity($("#section6-image"));
+            });
+            $("#section6-logo").addClass("animated zoomOut no-so-long").one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+                $("#section6-logo").removeClass("animated zoomOut no-so-long");
+                hideOpacity($("#section6-logo"));
+            });
+            $("#section6-title").addClass("animated zoomOut no-so-long").one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+                $("#section6-title").removeClass("animated zoomOut no-so-long");
+                hideOpacity($("#section6-title"));
+            });
 
         }
         function page_seven_out(){
-            hideOpacity($("#section7-title"));
-            hideOpacity($("#section7-content"));
-            hideOpacity($("#section7-logo"));
+            $("#section7-title").addClass("animated zoomOut no-so-long").one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+                $("#section7-title").removeClass("animated zoomOut no-so-long");
+                hideOpacity($("#section7-title"));
+            });
+            $("#section7-content").addClass("animated zoomOut no-so-long").one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+                $("#section7-content").removeClass("animated zoomOut no-so-long");
+                hideOpacity($("#section7-content"));
+            });
+            $("#section7-logo").addClass("animated zoomOut no-so-long").one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+                $("#section7-logo").removeClass("animated zoomOut no-so-long");
+                hideOpacity($("#section7-logo"));
+            });
         }
         function page_eight_out(){
-            hideOpacity($("#section8-title"));
-            hideOpacity($("#section8-title-2"));
-            hideOpacity($("#section8-title-3"));
-            hideOpacity($("#section8-image"));
-            hideOpacity($("#section8-logo"));
+            $("#section8-title").addClass("animated zoomOut").one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+                $("#section8-title").removeClass("animated zoomOut");
+                hideOpacity($("#section8-title"));
+            });
+            $("#section8-title-2").addClass("animated zoomOut").one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+                $("#section8-title-2").removeClass("animated zoomOut");
+                hideOpacity($("#section8-title-2"));
+            });
+            $("#section8-title-3").addClass("animated zoomOut").one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+                $("#section8-title-3").removeClass("animated zoomOut");
+                hideOpacity($("#section8-title-3"));
+            });
+
+            $("#section8-image").addClass("animated zoomOut").one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+                $("#section8-image").removeClass("animated zoomOut");
+                hideOpacity($("#section8-image"));
+            });
+            $("#section8-logo").addClass("animated zoomOut").one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+                $("#section8-logo").removeClass("animated zoomOut");
+                hideOpacity($("#section8-logo"));
+            });
         }
 
 

@@ -72,6 +72,10 @@ body{
     -webkit-animation-duration: .3s;
     animation-duration: .3s;
 }
+.animated.no-so-long {
+    -webkit-animation-duration: 2s;
+    animation-duration: 2s;
+}
 .animated.long {
     -webkit-animation-duration: 4s;
     animation-duration: 4s;
