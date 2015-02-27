@@ -36,7 +36,7 @@
     <!--==================================================-->
     <div class="section" id="section2">
         <img src="img/page-2-bg-t.png" class="top-image"/>
-        <img src="img/page-2-bg-b.png" class="bottom-image"/>
+        <img src="img/page-2-bg-b.png" class="bottom-image z-index-1"/>
         <img src="img/page-2.svg" id="section2-title" class="title full-width" style="margin-top: -20%;"/>
         <img src="img/leaf-1.png" id="section2-leaf-1" style="position: absolute;width: 36px;height: auto;top:30%;left: 15%;"/>
         <img src="img/leaf-2.png" id="section2-leaf-2" style="position: absolute;width: 22px;height: auto;top:50%;right: 15%;"/>
@@ -405,7 +405,7 @@
             overLoading();
         },2500);
 
-        $(window).on('click', function(e) {
+        $(window).on('touchstart', function(e) {
             document.getElementById('bg-audio').play();
         });
     });
