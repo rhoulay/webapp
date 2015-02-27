@@ -13,7 +13,7 @@ h1{
 .section{
     text-align:center;
 }
-.section .top-image, .section .bottom-image{
+.top-image, .bottom-image{
     position: absolute;
     top: 0;
     left: 0;
@@ -21,7 +21,7 @@ h1{
     height: auto;
     z-index: -1;
 }
-.section .bottom-image{
+.bottom-image{
     top: auto;
     bottom: 0;
 }
@@ -72,8 +72,8 @@ body{
     animation-duration: .3s;
 }
 .animated.long {
-    -webkit-animation-duration: 10s;
-    animation-duration: 10s;
+    -webkit-animation-duration: 4s;
+    animation-duration: 4s;
 }
 .delay-1{
     -webkit-animation-delay: 1.21s;

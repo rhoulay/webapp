@@ -24,6 +24,8 @@
 </head>
 <body>
 <img src="img/logo.svg" id="logo"/>
+<img src="img/page-3-bg-b.png" id="wave" class="bottom-image"/>
+<img src="img/mountain.svg" id="mountain" class="bottom-image"/>
 <div id="fullpage">
     <div class="section" id="section1">
         <img src="img/page-1-title.svg" id="section1-title" class="title full-width"/>
@@ -41,19 +43,39 @@
     <!--==================================================-->
     <div class="section" id="section3">
         <img src="img/page-3-bg-t.png" class="top-image"/>
-        <img src="img/page-3-bg-b.png" class="bottom-image"/>
+
         <img src="img/page-3-title.svg" id="section3-title" class="title full-width" style="margin-bottom: -50%;"/>
     </div>
     <!--==================================================-->
-    <div class="section" id="section4"><h1>page 04</h1></div>
+    <div class="section" id="section4">
+        <img src="img/page-4-image.jpg" id="section4-image" class="full-width"/>
+        <img src="img/page-4-title.svg" id="section4-title" class="full-width"/>
+    </div>
     <!--==================================================-->
-    <div class="section" id="section5"><h1>page 05</h1></div>
+    <div class="section" id="section5">
+        <img src="img/page-5-image.jpg" id="section5-image" class="full-width"/>
+        <img src="img/page-5-title.svg" id="section5-title" class="full-width" style="padding-top: 10%;"/>
+    </div>
     <!--==================================================-->
-    <div class="section" id="section6"><h1>page 06</h1></div>
+    <div class="section" id="section6">
+        <img src="img/page-6-image.jpg" id="section6-image" class="top-image"/>
+        <img src="img/page-6-logo.svg" id="section6-logo" class="full-width"/>
+        <img src="img/page-6-title.svg" id="section6-title" class="full-width" style="padding-bottom: 30%;"/>
+    </div>
     <!--==================================================-->
-    <div class="section" id="section7"><h1>page 07</h1></div>
+    <div class="section" id="section7">
+        <img src="img/page-7-title.svg" id="section7-title" class="full-width"/>
+        <img src="img/page-7-content.svg" id="section7-content" class="full-width"/>
+        <img src="img/page-7-logo.svg" id="section7-logo" class="full-width"/>
+    </div>
     <!--==================================================-->
-    <div class="section" id="section8"><h1>page 08</h1></div>
+    <div class="section" id="section8">
+        <img src="img/page-8-title.svg" id="section8-title" class="full-width"/>
+        <img src="img/page-8-title-2.svg" id="section8-title-2" class="full-width"/>
+        <img src="img/page-8-title-3.svg" id="section8-title-3" class="full-width"/>
+        <img src="img/page-8-image.png" id="section8-image" style="padding-top: 20%;width: 140px;"/>
+        <img src="img/page-8-logo.svg" id="section8-logo" class="full-width"/>
+    </div>
 </div>
 <script type="text/javascript">
 
@@ -70,6 +92,13 @@
         page_one_out();
         page_two_out();
         page_three_out();
+        page_four_out();
+        page_five_out();
+        page_six_out();
+        page_seven_out();
+        page_eight_out();
+        $("#wave").hide();
+        $("#mountain").hide();
 
         function page_one_out(){
             hideOpacity($("#section1-title"));
@@ -85,6 +114,29 @@
         function page_three_out(){
             hideOpacity($("#section3-title"));
         }
+        function page_four_out(){
+            hideOpacity($("#section4-image"));
+            hideOpacity($("#section4-title"));
+        }
+        function page_five_out(){
+            hideOpacity($("#section5-image"));
+            hideOpacity($("#section5-title"));
+        }
+        function page_six_out(){
+            hideOpacity($("#section6-image"));
+            hideOpacity($("#section6-logo"));
+            hideOpacity($("#section6-title"));
+
+        }
+        function page_seven_out(){
+            hideOpacity($("#section7-title"));
+            hideOpacity($("#section7-content"));
+            hideOpacity($("#section7-logo"));
+        }
+        function page_eight_out(){
+
+        }
+
 
 
         function page_one_in(){
@@ -101,30 +153,91 @@
             });
         }
         function page_two_in(){
+
             showOpacity($("#section2-title"));
             $("#section2-title").addClass("animated zoomIn").one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
                 $("#section2-title").removeClass("animated zoomIn");
+            });
 
-                showOpacity($("#section2-leaf-1"));
-                showOpacity($("#section2-leaf-2"));
-                $("#section2-leaf-1").addClass("animated rollIn long").one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
-                    $("#section2-leaf-1").removeClass("animated rollIn long");
-                    $("#section2-leaf-1").addClass("animated rollOut long");
-                });
-                $("#section2-leaf-2").addClass("animated rollIn long delay-1").one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
-                    $("#section2-leaf-2").removeClass("animated rollIn long");
-                    $("#section2-leaf-2").addClass("animated rollOut long");
-                });
-
-
+            showOpacity($("#section2-leaf-1"));
+            showOpacity($("#section2-leaf-2"));
+            $("#section2-leaf-1").addClass("animated rollIn long").one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+                $("#section2-leaf-1").removeClass("animated rollIn long");
+                $("#section2-leaf-1").addClass("animated rollOut long");
+            });
+            $("#section2-leaf-2").addClass("animated rollIn long delay-1").one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+                $("#section2-leaf-2").removeClass("animated rollIn long");
+                $("#section2-leaf-2").addClass("animated rollOut long");
             });
         }
 
         function page_three_in(){
+            $("#wave").show();
+            $("#mountain").show();
             showOpacity($("#section3-title"));
             $("#section3-title").addClass("animated zoomIn").one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
                 $("#section3-title").removeClass("animated zoomIn");
             });
+        }
+        function page_four_in(){
+            showOpacity($("#section4-image"));
+            $("#section4-image").addClass("animated zoomIn half").one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+                $("#section4-image").removeClass("animated zoomIn half");
+
+                showOpacity($("#section4-title"));
+                $("#section4-title").addClass("animated zoomIn").one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+                    $("#section4-title").removeClass("animated zoomIn");
+                });
+            });
+        }
+        function page_five_in(){
+            showOpacity($("#section5-image"));
+            $("#section5-image").addClass("animated zoomIn half").one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+                $("#section5-image").removeClass("animated zoomIn half");
+
+                showOpacity($("#section5-title"));
+                $("#section5-title").addClass("animated zoomIn").one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+                    $("#section5-title").removeClass("animated zoomIn");
+                });
+            });
+
+        }
+        function page_six_in(){
+            showOpacity($("#section6-image"));
+            $("#section6-image").addClass("animated zoomIn half").one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+                $("#section6-image").removeClass("animated zoomIn half");
+
+                showOpacity($("#section6-logo"));
+                $("#section6-logo").addClass("animated zoomIn half").one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+                    $("#section6-logo").removeClass("animated zoomIn half");
+
+                    showOpacity($("#section6-title"));
+                    $("#section6-title").addClass("animated zoomIn half").one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+                        $("#section6-title").removeClass("animated zoomIn half");
+
+                    });
+                });
+            });
+        }
+        function page_seven_in(){
+            showOpacity($("#section7-title"));
+            $("#section7-title").addClass("animated zoomIn half").one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+                $("#section7-title").removeClass("animated zoomIn half");
+
+                showOpacity($("#section7-content"));
+                $("#section7-content").addClass("animated zoomIn half").one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+                    $("#section7-content").removeClass("animated zoomIn half");
+
+                    showOpacity($("#section7-logo"));
+                    $("#section7-logo").addClass("animated zoomIn half").one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+                        $("#section7-logo").removeClass("animated zoomIn half");
+
+                    });
+                });
+            });
+        }
+        function page_eight_in(){
+
         }
 
         $('#fullpage').fullpage({
@@ -145,6 +258,26 @@
                 else if(index == 3){
                     page_three_out();
                 }
+                else if(index == 4){
+                    page_five_out();
+                }
+                else if(index == 5){
+                    page_five_out();
+                }
+                else if(index == 6){
+                    page_six_out();
+                }
+                else if(index == 7){
+                    page_seven_out();
+                }
+                else if(index == 8){
+                    page_eight_out();
+                }
+
+                if(index == 3 && direction == 'up'){
+                    $("#wave").hide();
+                    $("#mountain").hide();
+                }
             },
             afterLoad: function(anchorLink, index){
                 var loadedSection = $(this);
@@ -157,6 +290,21 @@
                 }
                 else if(index == 3){
                     page_three_in();
+                }
+                else if(index == 4){
+                    page_four_in();
+                }
+                else if(index == 5){
+                    page_five_in();
+                }
+                else if(index == 6){
+                    page_six_in();
+                }
+                else if(index == 7){
+                    page_seven_in();
+                }
+                else if(index == 8){
+                    page_eight_in();
                 }
             }
         });
