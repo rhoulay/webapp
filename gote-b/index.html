@@ -59,12 +59,14 @@
         }
 
         function page_one_out(){
-
+            $("#section1 .title").css('opacity', '0');
         }
 
         function page_one_in(){
             $("#section1 .title").addClass("animated bounceInDown").one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+                $("#section1 .title").css('opacity', '1');
                 $("#section1 .title").removeClass("animated bounceInDown");
+
             });
         }
 
