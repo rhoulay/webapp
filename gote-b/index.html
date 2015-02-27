@@ -26,8 +26,8 @@
 <img src="img/logo.svg" id="logo"/>
 <div id="fullpage">
     <div class="section" id="section1">
-        <img src="img/page-1-title.svg" class="title full-width"/>
-        <img src="img/page-1-subtitle.svg" class="subtitle full-width"/>
+        <img src="img/page-1-title.svg" id="section1-title" class="title full-width"/>
+        <img src="img/page-1-subtitle.svg" id="section1-subtitle" class="subtitle full-width"/>
     </div>
     <!--==================================================-->
     <div class="section" id="section2">
@@ -63,18 +63,19 @@
         page_one_out();
 
         function page_one_out(){
-            hideOpacity($("#section1 .title"));
-            hideOpacity($("#section1 .subtitle"));
+            hideOpacity($("#section1-title"));
+            hideOpacity($("#section1-subtitle"));
         }
 
         function page_one_in(){
-            showOpacity($("#section1 .title"));
-            $("#section1 .title").addClass("animated bounceInDown").one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
-                $("#section1 .title").removeClass("animated bounceInDown");
+            showOpacity($("#section1-title"));
+            $("#section1-title").addClass("animated bounceInDown").one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+                $("#section1-title").removeClass("animated bounceInDown");
 
-                showOpacity($("#section1 .subtitle"));
-                $("#section1 .subtitle").addClass("animated bounceInDown").one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
-                    $("#subtitle .title").removeClass("animated bounceInDown");
+                showOpacity($("#section1-subtitle"));
+                $("#section1-subtitle").addClass("animated bounceInDown").one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+                    $("#section1-subtitle").removeClass("animated bounceInDown");
+                    console.log("hihi");
 
                 });
             });
