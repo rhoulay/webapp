@@ -23,6 +23,7 @@
 
 </head>
 <body>
+<audio id="bg-audio" src="img/bg.mp3" loop style="display: none;position: absolute"></audio>
 <img src="img/loading.svg" id="loading" style="position:absolute;width: 64px;height: auto; top:44%; left: 50%;margin-left: -32px;">
 <img src="img/logo.svg" id="logo"/>
 <img src="img/page-3-bg-b.png" id="wave" class="bottom-image"/>
@@ -402,14 +403,11 @@
         }
         window.setTimeout(function(){
             overLoading();
-//            $.fn.fullpage.setAllowScrolling(true);
-//            $(window).on('click', function(e) {
-//                document.getElementById('bg-audio').play();
-//                $('#open-button').hide();
-//                openCard();
-//            });
-
         },2500);
+
+        $(window).on('click', function(e) {
+            document.getElementById('bg-audio').play();
+        });
     });
 </script>
 </body>

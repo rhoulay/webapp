@@ -24,15 +24,18 @@ h1{
 .bottom-image{
     top: auto;
     bottom: 0;
+    z-index: 0;
 }
 
 
 /* Backgrounds will cover all the section
 * --------------------------------------- */
+html, body{
+    background-color: #ece5d9;
+}
 body{
     background-size: cover;
     background-image: url(img/background-image.jpg);
-    background-color: #ece5d9;
 }
 
 /* Defining each section background and styles
