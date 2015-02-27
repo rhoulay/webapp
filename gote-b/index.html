@@ -134,7 +134,11 @@
             hideOpacity($("#section7-logo"));
         }
         function page_eight_out(){
-
+            hideOpacity($("#section8-title"));
+            hideOpacity($("#section8-title-2"));
+            hideOpacity($("#section8-title-3"));
+            hideOpacity($("#section8-image"));
+            hideOpacity($("#section8-logo"));
         }
 
 
@@ -204,8 +208,8 @@
         }
         function page_six_in(){
             showOpacity($("#section6-image"));
-            $("#section6-image").addClass("animated zoomIn half").one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
-                $("#section6-image").removeClass("animated zoomIn half");
+            $("#section6-image").addClass("animated fadeIn half").one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+                $("#section6-image").removeClass("animated fadeIn half");
 
                 showOpacity($("#section6-logo"));
                 $("#section6-logo").addClass("animated zoomIn half").one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
@@ -237,6 +241,33 @@
             });
         }
         function page_eight_in(){
+            showOpacity($("#section8-title"));
+            $("#section8-title").addClass("animated zoomIn half").one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+                $("#section8-title").removeClass("animated zoomIn half");
+
+                showOpacity($("#section8-title-2"));
+                $("#section8-title-2").addClass("animated zoomIn half").one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+                    $("#section8-title-2").removeClass("animated zoomIn half");
+
+                    showOpacity($("#section8-title-3"));
+                    $("#section8-title-3").addClass("animated zoomIn half").one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+                        $("#section8-title-3").removeClass("animated zoomIn half");
+
+
+                    });
+                });
+            });
+
+            showOpacity($("#section8-image"));
+            $("#section8-image").addClass("animated zoomIn half").one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+                $("#section8-image").removeClass("animated zoomIn half");
+
+                showOpacity($("#section8-logo"));
+                $("#section8-logo").addClass("animated zoomIn half").one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+                    $("#section8-logo").removeClass("animated zoomIn half");
+
+                });
+            });
 
         }
 
