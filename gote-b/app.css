@@ -70,3 +70,7 @@ body{
     -webkit-animation-duration: .3s;
     animation-duration: .3s;
 }
+.full-width{
+    width: 100%;
+    height: auto;
+}
