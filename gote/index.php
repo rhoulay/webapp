@@ -1,3 +1,9 @@
+<?php
+require_once "jssdk.php";
+$jssdk = new JSSDK("wx5ee7eb4c8db61ac7", "62a35a63c75a99f9bc620e57ab0ca0ed");
+$signPackage = $jssdk->GetSignPackage();
+?>
+
 <!doctype html>
 <html class="no-js" lang="">
 <head>
@@ -11,6 +17,19 @@
 
     <link rel="stylesheet" href="app.css">
     <link rel="stylesheet" href="lib/animate.min.css">
+
+    <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+
+        <script>
+        var _hmt = _hmt || [];
+        (function() {
+          var hm = document.createElement("script");
+          hm.src = "//hm.baidu.com/hm.js?6fd2b54ea5091a7022104ba1f977247c";
+          var s = document.getElementsByTagName("script")[0];
+          s.parentNode.insertBefore(hm, s);
+        })();
+        </script>
+
 </head>
 
 <body>
@@ -43,7 +62,9 @@
     <script>
         document.ontouchmove = function(e) {e.preventDefault()};
         $(document).ready(function() {
-
+            var scale = $(window).width()/320;
+            $('#gote').animate({ transform: 'scale('+ scale +')' }, 0);
+            $('#gote-small').animate({ transform: 'scale('+ scale *.6 +')' }, 0);
 
 
 
@@ -56,9 +77,6 @@
                     $('#open-button').show();
                     $('#gote').show();
                     $('#gote-small').show();
-                    var scale = $(window).width()/320;
-                    $('#gote').animate({ transform: 'scale('+ scale +')' }, 0);
-                    $('#gote-small').animate({ transform: 'scale('+ scale *.6 +')' }, 0);
 
 
                 });
@@ -109,6 +127,49 @@
         });
     </script>
 </div>
+<script>
+        wx.config({
+          appId: '<?php echo $signPackage["appId"];?>',
+          timestamp: <?php echo $signPackage["timestamp"];?>,
+          nonceStr: '<?php echo $signPackage["nonceStr"];?>',
+          signature: '<?php echo $signPackage["signature"];?>',
+            jsApiList: [
+                'onMenuShareTimeline',
+                'onMenuShareAppMessage'
 
+                // 所有要调用的 API 都要加到这个列表中
+            ]
+        });
+
+        wx.ready(function () {
+            // 在这里调用 API
+            wx.onMenuShareTimeline({
+                title: '【太平人寿贺春矩献】让健康永远伴您不停步!', // 分享标题
+                link: 'http://weixinapp.weburner.com/gote/', // 分享链接
+                imgUrl: 'http://weixinapp.weburner.com/gote/img/icon.jpg', // 分享图标
+                success: function () {
+                    // 用户确认分享后执行的回调函数
+                },
+                cancel: function () {
+                    // 用户取消分享后执行的回调函数
+                }
+            });
+
+            wx.onMenuShareAppMessage({
+                title: '【太平人寿贺春矩献】让健康永远伴您不停步!', // 分享标题
+                desc: '太平人寿贺春矩献，福禄满堂，3.6全球首发，祝您幸福“羊”帆！', // 分享描述
+                link: 'http://weixinapp.weburner.com/gote/', // 分享链接
+                imgUrl: 'http://weixinapp.weburner.com/gote/img/icon.jpg', // 分享图标
+                success: function () {
+                    // 用户确认分享后执行的回调函数
+                },
+                cancel: function () {
+                    // 用户取消分享后执行的回调函数
+                }
+            });
+
+
+        });
+</script>
 </body>
 </html>
