@@ -52,21 +52,30 @@
 
 
     $(document).ready(function() {
-        page_one_init();
-        function page_one_init(){
-//            $("#section1 .title").css('opacity', '0');
 
+        function hideOpacity(obj){
+            obj.css('opacity', '0');
         }
+        function showOpacity(obj){
+            obj.css('opacity', '1');
+        }
+        page_one_out();
 
         function page_one_out(){
-            $("#section1 .title").hide();
+            hideOpacity($("#section1 .title"));
+            hideOpacity($("#section1 .subtitle"));
         }
 
         function page_one_in(){
-            $("#section1 .title").show();
+            showOpacity($("#section1 .title"));
             $("#section1 .title").addClass("animated bounceInDown").one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
                 $("#section1 .title").removeClass("animated bounceInDown");
 
+                showOpacity($("#section1 .subtitle"));
+                $("#section1 .subtitle").addClass("animated bounceInDown").one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+                    $("#subtitle .title").removeClass("animated bounceInDown");
+
+                });
             });
         }
 
