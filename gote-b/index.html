@@ -75,7 +75,8 @@
         <img src="img/page-8-title.svg" id="section8-title" class="full-width"/>
         <img src="img/page-8-title-2.svg" id="section8-title-2" class="full-width"/>
         <img src="img/page-8-title-3.svg" id="section8-title-3" class="full-width"/>
-        <img src="img/page-8-image.png" id="section8-image" style="padding-top: 20%;width: 140px;"/>
+        <img src="img/page-8-text.svg" id="section8-text" class="full-width"/>
+        <img src="img/page-8-image.png" id="section8-image" style="width: 140px;"/>
         <img src="img/page-8-logo.svg" id="section8-logo" class="full-width"/>
     </div>
 </div>
@@ -184,6 +185,10 @@
                 $("#section8-title-3").removeClass("animated zoomOut");
                 hideOpacity($("#section8-title-3"));
             });
+            $("#section8-text").addClass("animated zoomOut").one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+                $("#section8-text").removeClass("animated zoomOut");
+                hideOpacity($("#section8-text"));
+            });
 
             $("#section8-image").addClass("animated zoomOut").one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
                 $("#section8-image").removeClass("animated zoomOut");
@@ -274,16 +279,16 @@
         }
         function page_seven_in(){
             showOpacity($("#section7-title"));
-            $("#section7-title").addClass("animated zoomIn").one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
-                $("#section7-title").removeClass("animated zoomIn");
+            $("#section7-title").addClass("animated fadeInDown").one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+                $("#section7-title").removeClass("animated fadeInDown");
 
                 showOpacity($("#section7-content"));
-                $("#section7-content").addClass("animated zoomIn").one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
-                    $("#section7-content").removeClass("animated zoomIn");
+                $("#section7-content").addClass("animated fadeIn").one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+                    $("#section7-content").removeClass("animated fadeIn");
 
                     showOpacity($("#section7-logo"));
-                    $("#section7-logo").addClass("animated zoomIn").one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
-                        $("#section7-logo").removeClass("animated zoomIn");
+                    $("#section7-logo").addClass("animated fadeInUp").one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+                        $("#section7-logo").removeClass("animated fadeInUp");
 
                     });
                 });
@@ -295,29 +300,30 @@
                 $("#section8-title").removeClass("animated fadeIn");
 
                 showOpacity($("#section8-title-2"));
-                $("#section8-title-2").addClass("animated zoomIn").one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
-                    $("#section8-title-2").removeClass("animated zoomIn");
+                $("#section8-title-2").addClass("animated fadeIn").one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+                    $("#section8-title-2").removeClass("animated fadeIn");
 
                     showOpacity($("#section8-title-3"));
                     $("#section8-title-3").addClass("animated fadeIn").one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
                         $("#section8-title-3").removeClass("animated fadeIn");
 
+                        showOpacity($("#section8-text"));
+                        $("#section8-text").addClass("animated fadeIn no-so-long").one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+                            $("#section8-text").removeClass("animated fadeIn no-so-long");
+                        });
 
+                        showOpacity($("#section8-image"));
+                        $("#section8-image").addClass("animated fadeIn no-so-long").one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+                            $("#section8-image").removeClass("animated fadeIn no-so-long");
+                        });
+                        showOpacity($("#section8-logo"));
+                        $("#section8-logo").addClass("animated fadeIn no-so-long").one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+                            $("#section8-logo").removeClass("animated fadeIn no-so-long");
+
+                        });
                     });
                 });
             });
-
-            showOpacity($("#section8-image"));
-            $("#section8-image").addClass("animated zoomIn").one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
-                $("#section8-image").removeClass("animated zoomIn");
-
-                showOpacity($("#section8-logo"));
-                $("#section8-logo").addClass("animated fadeIn").one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
-                    $("#section8-logo").removeClass("animated fadeIn");
-
-                });
-            });
-
         }
 
         $('#fullpage').fullpage({
