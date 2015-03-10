@@ -80,6 +80,7 @@ body{
     -webkit-animation-delay: 3.6s;
     animation-delay: 3.6s;
 }
+
 .fix-top{
     position: absolute;
     left: 0;
