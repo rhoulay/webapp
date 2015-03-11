@@ -27,9 +27,9 @@ body{
 
     /* Center slide text vertically */
     display: -webkit-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
+    /*display: -ms-flexbox;*/
+    /*display: -webkit-flex;*/
+    /*display: flex;*/
 
     -webkit-box-orient: vertical;
     -moz-box-orient: vertical;
