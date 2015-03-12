@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Swiper demo</title>
+    <title>爱家保障计划</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
 
     <!-- Link Animated CSS -->
@@ -16,7 +16,10 @@
 
 </head>
 <body>
-<img src="imgs/logo.svg" class="full-width fix-top z-index-10"/>
+<img src="imgs/loading.svg" id="loading"
+     style="position:absolute;width: 64px;height: auto; top:44%; left: 50%;margin-left: -32px;">
+<img src="imgs/logo.svg" id="logo" class="full-width fix-top z-index-10"/>
+
 <!-- Swiper -->
 <div class="swiper-container">
     <div class="swiper-wrapper">
@@ -52,32 +55,33 @@
 
         <!-- page-5 -->
         <div class="swiper-slide">
-            <img src="imgs/logo-heart.png" class="full-width fix-top delay-6 z-index-10" animated-css="fadeIn"/>
+            <img src="imgs/logo-heart.png" class="logo-heart delay-6 z-index-10" animated-css="fadeIn"/>
             <img src="imgs/page-5-hands-up.png" class="full-width fix-top delay-1" animated-css="fadeInDown"/>
-            <img src="imgs/page-5-text-1.png" class=" delay-4" animated-css="fadeIn" style="width: 60%; height: auto; padding-top: 50px"/>
-            <img src="imgs/page-5-text-2.png" class=" delay-5" animated-css="fadeIn" style="width: 60%; height: auto"/>
+            <img src="imgs/page-5-text-1.png" class=" delay-4" animated-css="fadeIn"
+                 style="width: 55%; height: auto; padding-top: 50px"/>
+            <img src="imgs/page-5-text-2.png" class="delay-5" animated-css="fadeIn" style="width: 55%; height: auto"/>
             <img src="imgs/page-5-hands-down.png" class="full-width fix-bottom delay-2" animated-css="fadeInUp"/>
         </div>
 
         <!-- page-6 -->
         <div class="swiper-slide">
-            <img src="imgs/logo-heart.png" class="full-width fix-top delay-5 z-index-10" animated-css="fadeIn"/>
+            <img src="imgs/logo-heart.png" class="logo-heart delay-5 z-index-10" animated-css="fadeIn"/>
             <img src="imgs/page-6-text-1.png" class="full-width delay-1" animated-css="fadeIn"/>
             <img src="imgs/page-6-text-2.png" class="full-width delay-2" animated-css="fadeIn"/>
-            <img src="imgs/page-6-text-3.png" class="full-width delay-3" animated-css="bounceIn"/>
+            <img src="imgs/page-6-text-3.png" class="full-width delay-3" animated-css="fadeIn"/>
         </div>
 
         <!-- page-7 -->
         <div class="swiper-slide">
-            <img src="imgs/logo-heart.png" class="full-width fix-top delay-5 z-index-10" animated-css="fadeIn"/>
+            <img src="imgs/logo-heart.png" class="logo-heart delay-5 z-index-10" animated-css="fadeIn"/>
             <img src="imgs/page-7-text-1.png" class="full-width delay-1" animated-css="fadeIn"/>
-            <img src="imgs/page-7-main.svg" class="full-width delay-2" animated-css="zoomIn"/>
+            <img src="imgs/page-7-main.svg" class="full-width delay-2" animated-css="fadeIn"/>
             <img src="imgs/page-7-text-2.png" class="full-width delay-3" animated-css="fadeIn"/>
         </div>
 
         <!-- page-8 -->
         <div class="swiper-slide">
-            <img src="imgs/logo-heart.png" class="full-width fix-top delay-5 z-index-10" animated-css="fadeIn"/>
+            <img src="imgs/logo-heart.png" class="logo-heart delay-5 z-index-10" animated-css="fadeIn"/>
             <img src="imgs/page-8-bg.png" class="full-width fix-top"/>
             <img src="imgs/page-8-text-1.png" class="full-width delay-1" animated-css="fadeIn"/>
             <img src="imgs/page-8-text-2.png" class="full-width delay-2" animated-css="fadeIn"/>
@@ -94,14 +98,18 @@
     </div>
 
 </div>
-<img src="imgs/wave.png" class="full-width fix-bottom"/>
-<img src="imgs/mountain.svg" class="full-width fix-bottom"/>
+
+<img src="imgs/wave.png" class="full-width fix-bottom background"/>
+<img src="imgs/mountain.svg" class="full-width fix-bottom background"/>
 
 
 <!-- Swiper JS -->
 <script src="libs/zepto.min.js"></script>
 <script src="libs/swiper.jquery.min.js"></script>
 <script src="app.js"></script>
+<script>
 
+
+</script>
 </body>
 </html>
