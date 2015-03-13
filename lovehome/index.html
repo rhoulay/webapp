@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Swiper demo</title>
+    <title>福禄满堂</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
 
     <!-- Link Animated CSS -->
@@ -16,14 +16,16 @@
 
 </head>
 <body>
-<img src="imgs/logo.svg" class="full-width fix-top z-index-10"/>
+<audio id="bg-audio" src="imgs/bg.mp3" loop style="display: none;position: absolute"></audio>
+<img src="imgs/loading.svg" id="loading" style="position:absolute;width: 64px;height: auto; top:44%; left: 50%;margin-left: -32px;">
+<img id="logo" src="imgs/logo.svg" class="full-width fix-top z-index-10"/>
 <!-- Swiper -->
 <div class="swiper-container">
     <div class="swiper-wrapper">
         <!-- page-1 -->
         <div class="swiper-slide">
-            <img src="imgs/page-1-main.svg" class="full-width delay-1" animated-css="fadeInDown"/>
-            <img src="imgs/page-1-text.svg" class="full-width delay-3" animated-css="zoomIn"/>
+            <img id="page-1-main" src="imgs/page-1-main.svg" class="full-width delay-1" animated-css="fadeInDown"/>
+            <img id="page-1-text" src="imgs/page-1-text.svg" class="full-width delay-3" animated-css="zoomIn"/>
         </div>
 
         <!-- page-2 -->
@@ -44,10 +46,10 @@
 
         <!-- page-4 -->
         <div class="swiper-slide">
-            <img src="imgs/page-4-title.svg" class="full-width delay-1" animated-css="fadeInDown"/>
-            <img src="imgs/page-4-main.png" class="full-width delay-2" animated-css="zoomIn"/>
-            <img src="imgs/page-4-text-1.svg" class="full-width delay-4" animated-css="fadeIn"/>
-            <img src="imgs/page-4-text-2.svg" class="full-width delay-5" animated-css="fadeIn"/>
+            <img src="imgs/page-4-title.svg" class="full-width delay-0" animated-css="fadeIn"/>
+            <img src="imgs/page-4-main.png" class="full-width delay-1" animated-css="fadeIn"/>
+            <img src="imgs/page-4-text-1.svg" class="full-width delay-2" animated-css="fadeIn"/>
+            <img src="imgs/page-4-text-2.svg" class="full-width delay-3" animated-css="fadeIn"/>
         </div>
 
         <!-- page-5 -->
@@ -64,14 +66,14 @@
             <img src="imgs/logo-heart.png" class="full-width fix-top delay-5 z-index-10" animated-css="fadeIn"/>
             <img src="imgs/page-6-text-1.png" class="full-width delay-1" animated-css="fadeIn"/>
             <img src="imgs/page-6-text-2.png" class="full-width delay-2" animated-css="fadeIn"/>
-            <img src="imgs/page-6-text-3.png" class="full-width delay-3" animated-css="bounceIn"/>
+            <img src="imgs/page-6-text-3.png" class="full-width delay-3" animated-css="fadeIn"/>
         </div>
 
         <!-- page-7 -->
         <div class="swiper-slide">
             <img src="imgs/logo-heart.png" class="full-width fix-top delay-5 z-index-10" animated-css="fadeIn"/>
             <img src="imgs/page-7-text-1.png" class="full-width delay-1" animated-css="fadeIn"/>
-            <img src="imgs/page-7-main.svg" class="full-width delay-2" animated-css="zoomIn"/>
+            <img src="imgs/page-7-main.svg" class="full-width delay-2" animated-css="fadeIn"/>
             <img src="imgs/page-7-text-2.png" class="full-width delay-3" animated-css="fadeIn"/>
         </div>
 
@@ -81,7 +83,7 @@
             <img src="imgs/page-8-bg.png" class="full-width fix-top"/>
             <img src="imgs/page-8-text-1.png" class="full-width delay-1" animated-css="fadeIn"/>
             <img src="imgs/page-8-text-2.png" class="full-width delay-2" animated-css="fadeIn"/>
-            <img src="imgs/page-8-banner.svg" class="full-width delay-3" animated-css="rotateIn"/>
+            <img src="imgs/page-8-banner.svg" class="full-width delay-3" animated-css="fadeIn"/>
         </div>
 
         <!-- page-9 -->
@@ -94,8 +96,8 @@
     </div>
 
 </div>
-<img src="imgs/wave.png" class="full-width fix-bottom"/>
-<img src="imgs/mountain.svg" class="full-width fix-bottom"/>
+<img id="wave" src="imgs/wave.png" class="full-width fix-bottom"/>
+<img id="mountain" src="imgs/mountain.svg" class="full-width fix-bottom"/>
 
 
 <!-- Swiper JS -->
