@@ -1,14 +1,49 @@
 // Initialize Swiper
 $(document).ready(function () {
 
-    $(window).on('touchstart', function(e) {
-        document.getElementById('bg-audio').play();
-    });
 
-    window.setTimeout(function(){
+var isOK = false;
+    var preload;
+
+    function init() {
+        // Create a new queue.
+        preload = new createjs.LoadQueue(false, "imgs/");
+
+        var plugin = {
+            getPreloadHandlers: function () {
+                return {
+                    extensions: ["svg","mp3","png"],
+                    callback: function (item) {
+                        var id = item.src.toLowerCase().split("/").pop().split(".")[0];
+                        $("#"+id).attr("src", item.src);
+                    }
+                };
+            }
+        };
+
+        preload.installPlugin(plugin);
+        preload.loadManifest(["logo.svg",
+            "wave.png",
+            "mountain.svg",
+            "page-1-main.svg",
+            "page-1-text.svg",
+            "bg-audio.mp3",
+            "page-2-portrait.png",
+            "page-8-bg.png",
+            "background-image.jpg"
+
+        ]);
+        preload.on("complete", handleComplete);
+
+    }
+
+    function handleComplete(event) {
+        $(window).on('touchstart', function(e) {
+            document.getElementById('bg-audio').play();
+        });
         overLoading();
-    },2500);
-
+    }
+    init();
 
 
     function overLoading(){

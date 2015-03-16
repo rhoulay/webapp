@@ -16,23 +16,23 @@
 
 </head>
 <body>
-<audio id="bg-audio" src="imgs/bg.mp3" loop style="display: none;position: absolute"></audio>
+<audio id="bg-audio" src="imgs/bg-audio.mp3" loop style="display: none;position: absolute"></audio>
 <img src="imgs/loading.svg" id="loading" style="position:absolute;width: 64px;height: auto; top:44%; left: 50%;margin-left: -32px;">
-<img id="logo" src="imgs/logo.svg" class="full-width fix-top z-index-10"/>
+<img id="logo" class="image full-width fix-top z-index-10"/>
 <!-- Swiper -->
 <div class="swiper-container">
     <div class="swiper-wrapper">
         <!-- page-1 -->
         <div class="swiper-slide">
-            <img id="page-1-main" src="imgs/page-1-main.svg" class="full-width delay-1" animated-css="fadeInDown"/>
-            <img id="page-1-text" src="imgs/page-1-text.svg" class="full-width delay-3" animated-css="zoomIn"/>
+            <img id="page-1-main" class="full-width delay-1" animated-css="fadeInDown"/>
+            <img id="page-1-text" class="full-width delay-3" animated-css="zoomIn"/>
         </div>
 
         <!-- page-2 -->
         <div class="swiper-slide">
             <img src="imgs/page-2-text-1.png" class="full-width delay-1" animated-css="fadeIn"/>
             <img src="imgs/page-2-text-2.png" class="full-width delay-3" animated-css="fadeIn"/>
-            <img src="imgs/page-2-portrait.png" class="full-width delay-5" animated-css="zoomIn"/>
+            <img id="page-2-portrait" class="full-width delay-5" animated-css="fadeInUp"/>
         </div>
 
         <!-- page-3 -->
@@ -42,6 +42,7 @@
             <img src="imgs/page-3-text-3.svg" class="full-width delay-3" animated-css="fadeInLeft"/>
             <img src="imgs/page-3-banner.svg" class="full-width delay-5" animated-css="rotateIn"/>
             <img src="imgs/page-3-text-4.svg" class="full-width delay-6" animated-css="fadeInUp"/>
+            <img src="imgs/page-3-text-5.svg" class="full-width delay-6" animated-css="fadeIn"/>
         </div>
 
         <!-- page-4 -->
@@ -80,7 +81,7 @@
         <!-- page-8 -->
         <div class="swiper-slide">
             <img src="imgs/logo-heart.png" class="full-width fix-top delay-5 z-index-10" animated-css="fadeIn"/>
-            <img src="imgs/page-8-bg.png" class="full-width fix-top"/>
+            <img id="page-8-bg" class="full-width fix-top"/>
             <img src="imgs/page-8-text-1.png" class="full-width delay-1" animated-css="fadeIn"/>
             <img src="imgs/page-8-text-2.png" class="full-width delay-2" animated-css="fadeIn"/>
             <img src="imgs/page-8-banner.svg" class="full-width delay-3" animated-css="fadeIn"/>
@@ -96,13 +97,14 @@
     </div>
 
 </div>
-<img id="wave" src="imgs/wave.png" class="full-width fix-bottom"/>
-<img id="mountain" src="imgs/mountain.svg" class="full-width fix-bottom"/>
+<img id="wave" class="full-width fix-bottom"/>
+<img id="mountain" class="full-width fix-bottom"/>
 
 
 <!-- Swiper JS -->
 <script src="libs/zepto.min.js"></script>
 <script src="libs/swiper.jquery.min.js"></script>
+<script src="libs/preloadjs-NEXT.min.js"></script>
 <script src="app.js"></script>
 
 </body>
