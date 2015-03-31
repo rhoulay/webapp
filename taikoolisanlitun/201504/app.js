@@ -22,7 +22,7 @@ $(document).ready(function () {
         };
 
         preload.installPlugin(plugin);
-        preload.loadManifest(["logo.svg"
+        preload.loadManifest(["logo.svg","logo.svg"
 
         ]);
         preload.on("complete", handleComplete);
