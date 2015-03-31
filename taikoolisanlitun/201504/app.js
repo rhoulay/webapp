@@ -30,8 +30,9 @@ $(document).ready(function () {
     }
 
     function handleComplete(event) {
+        console.log('ok');
         overLoading();
-        console.log('ok;')
+
     }
 
 
