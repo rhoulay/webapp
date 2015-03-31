@@ -7,7 +7,7 @@ $(document).ready(function () {
 
     function init() {
         // Create a new queue.
-        preload = new createjs.LoadQueue(false, "imgs/");
+        preload = new createjs.LoadQueue(true, "imgs/");
 
         var plugin = {
             getPreloadHandlers: function () {
