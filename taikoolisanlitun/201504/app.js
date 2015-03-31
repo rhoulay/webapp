@@ -25,24 +25,22 @@ $(document).ready(function () {
         preload.loadManifest(["logo.svg","logo.svg"
 
         ]);
-        preload.on("complete", handleComplete, this);
-        console.log('init');
+        preload.on("complete", handleComplete);
 
     }
 
     function handleComplete(event) {
-        console.log('ok');
         overLoading();
 
     }
 
     function overLoading(){
+        $('#main-content').show();
         $('#loading').addClass("animated bounceOut").one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
             $("#loading").removeClass("animated bounceOut");
             hideOpacity($("#loading"));
             $("#logo").css('opacity', '1');
             $("#wave").css('opacity', '1');
-            $("#main-content").css('opacity', '1');
             initSwiper();
             initModal();
         });
@@ -51,7 +49,6 @@ $(document).ready(function () {
     hideSlide();
     $("#logo").css('opacity', '0');
     $("#wave").css('opacity', '0');
-    $('#main-content').css('opacity', '0');
 
     init();
 
