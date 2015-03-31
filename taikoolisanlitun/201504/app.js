@@ -1,9 +1,9 @@
 // Initialize Swiper
 $(document).ready(function () {
 
-
     var isOK = false;
     var preload;
+    var currentIndex = 0;
 
     function init() {
         // Create a new queue.
@@ -33,7 +33,7 @@ $(document).ready(function () {
         overLoading();
         console.log('ok;')
     }
-    init();
+
 
 
     function overLoading(){
@@ -52,6 +52,8 @@ $(document).ready(function () {
     $("#logo").css('opacity', '0');
     $("#wave").css('opacity', '0');
     $('#main-content').css('opacity', '0');
+
+    init();
 
     function initModal(){
         $('.modal-button').on('click', function(e){
@@ -80,7 +82,7 @@ $(document).ready(function () {
             });
         });
     }
-    var currentIndex = 0;
+
     function initSwiper(){
 
         //initialize swiper when document ready
