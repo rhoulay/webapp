@@ -22,15 +22,7 @@ $(document).ready(function () {
         };
 
         preload.installPlugin(plugin);
-        preload.loadManifest(["logo.svg",
-            "wave.png",
-            "mountain.svg",
-            "page-1-main.svg",
-            "page-1-text.svg",
-            "bg-audio.mp3",
-            "page-2-portrait.png",
-            "page-8-bg.png",
-            "background-image.jpg"
+        preload.loadManifest(["logo.svg"
 
         ]);
         preload.on("complete", handleComplete);
@@ -38,9 +30,6 @@ $(document).ready(function () {
     }
 
     function handleComplete(event) {
-        $(window).on('touchstart', function(e) {
-            document.getElementById('bg-audio').play();
-        });
         overLoading();
     }
     init();
@@ -52,20 +41,49 @@ $(document).ready(function () {
             hideOpacity($("#loading"));
             $("#logo").css('opacity', '1');
             $("#wave").css('opacity', '1');
-            $("#mountain").css('opacity', '1');
+            $("#main-content").css('opacity', '1');
             initSwiper();
+            initModal();
         });
     }
 
     hideSlide();
     $("#logo").css('opacity', '0');
     $("#wave").css('opacity', '0');
-    $("#mountain").css('opacity', '0');
+    $('#main-content').css('opacity', '0');
 
+    function initModal(){
+        $('.modal-button').on('click', function(e){
+            $.get($(this).attr('modal-content'), function(response){
+                $('#modal-content .modal-inner').html(response);
+                $('#modal-content').show();
+                $('#modal-content .modal-container').addClass('animated bounceIn').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+                    $('#modal-content .modal-container').removeClass('animated bounceIn');
+
+                    $('#modal-close-button').show();
+                    $('#modal-close-button').addClass('animated fadeIn').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+                        $('#modal-close-button').removeClass('animated fadeIn');
+                    });
+                });
+                var swiperV = new Swiper('#modal-content .modal-container', {
+                });
+            });
+        });
+
+        $('#modal-close-button').on('click', function(e){
+            $('#modal-close-button').hide();
+            $('#modal-content .modal-container').addClass('animated bounceOut').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+                $('#modal-content .modal-container').removeClass('animated bounceOut');
+                $('#modal-content').hide();
+                $('#modal-content .modal-inner').html('');
+            });
+        });
+    }
     var currentIndex = 0;
     function initSwiper(){
+
         //initialize swiper when document ready
-        var mySwiper = new Swiper ('.swiper-container', {
+        var mySwiper = new Swiper ('#main-content', {
             // Optional parameters
             direction: 'vertical',
             onInit: function(swiper){
