@@ -4,6 +4,7 @@ $(document).ready(function () {
     var isOK = false;
     var preload;
     var currentIndex = 0;
+    var mySwiper;
 
     function init() {
         // Create a new queue.
@@ -54,6 +55,7 @@ $(document).ready(function () {
 
     function initModal(){
         $('.modal-button').on('click', function(e){
+            mySwiper.disableMousewheelControl();
             $.get($(this).attr('modal-content'), function(response){
                 $('#modal-content .modal-inner').html(response);
                 $('#modal-content').show();
@@ -76,6 +78,7 @@ $(document).ready(function () {
                 $('#modal-content .modal-container').removeClass('animated bounceOut');
                 $('#modal-content').hide();
                 $('#modal-content .modal-inner').html('');
+                mySwiper.enableMousewheelControl();
             });
         });
     }
@@ -83,7 +86,7 @@ $(document).ready(function () {
     function initSwiper(){
 
         //initialize swiper when document ready
-        var mySwiper = new Swiper ('#main-content', {
+        mySwiper = new Swiper ('#main-content', {
             // Optional parameters
             direction: 'vertical',
             onInit: function(swiper){
