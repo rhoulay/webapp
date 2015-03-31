@@ -31,6 +31,7 @@ $(document).ready(function () {
 
     function handleComplete(event) {
         overLoading();
+        console.log('ok;')
     }
     init();
 
