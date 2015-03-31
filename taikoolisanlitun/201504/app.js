@@ -26,6 +26,7 @@ $(document).ready(function () {
 
         ]);
         preload.on("complete", handleComplete);
+        console.log('init');
 
     }
 
