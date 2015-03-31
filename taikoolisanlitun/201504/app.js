@@ -25,7 +25,7 @@ $(document).ready(function () {
         preload.loadManifest(["logo.svg","logo.svg"
 
         ]);
-        preload.on("complete", handleComplete);
+        preload.on("complete", handleComplete, this);
         console.log('init');
 
     }
