@@ -36,8 +36,6 @@ $(document).ready(function () {
 
     }
 
-
-
     function overLoading(){
         $('#loading').addClass("animated bounceOut").one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
             $("#loading").removeClass("animated bounceOut");
@@ -137,4 +135,6 @@ $(document).ready(function () {
 
         });
     }
+
+    console.log('js');
 });
